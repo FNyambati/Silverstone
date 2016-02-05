@@ -1,0 +1,19 @@
+<nav>
+<ul class="nav nav-tabs" style="background-color: #222222;">
+  <li role="presentation"><a ui-sref="experience"style="color:#999D99">INTRODUCTION</a></li>
+  <li role="presentation"><a ui-sref="vip"style="color:#999D99">V.I.P</a></li>
+  <li role="presentation"class="active"><a ui-sref="cars"style="background-color:#0D2E60;color:#999D99">CAR RENTAL</a></li>
+  <li role="presentation"><a ui-sref="bikes"style="color:#999D99">BIKE RENTAL</a></li>
+</ul>
+</nav>
+<div class="cars" ng-repeat="car in cars">
+        <img ng-src="{{car.img}}">
+        <br>car: {{car.car}}
+        <br> difficulty: {{car.difficulty}}
+        <br> Description: {{car.description}}
+        <br> Price: ${{car.price}}
+        <br> horsepower: {{car.horsepower}} HP
+        <br> 0-60: ${car.sixty}} seconds
+        <br> Top Speed: {{car.topSpeed}} MPH
+        <hr>
+    </div>

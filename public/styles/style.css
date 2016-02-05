@@ -1,0 +1,445 @@
+html {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+
+}
+/*main {
+    min-height: 100vh;
+    background-color: #222222;
+  }*/
+
+
+#video-background {
+/*//////////  making the video fullscreen \\\\\\\\\\\\\\\ */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+/*/////////////MENUBAR\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.navbar-brand img{
+  max-width: 50px;
+  max-height: 50px;
+  line-height: inherit;
+  padding-bottom: 25px;
+}
+
+/*///////////////////HOME VIDEO AND BGRD\\\\\\\\\\\\*/
+.homeImage {
+  background-image: url('http://bin.smwcentral.net/u/11361/BlackTransparentBackground.png');
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: auto;
+}
+.homeImage h1 {
+  margin: 0 auto;
+}
+.homeImage img{
+  max-width: 100vw;
+  max-height: 100vh;
+}
+/*////////////////////////////FOOTER\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+.footer-distributed{
+	background-color: #222222;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+.footer-distributed .footer-links a:hover{
+  color: white;
+}
+.footer-distributed .footer-links{
+	color:  #999D99;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #999D99;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #999D99;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #124187;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #999D99;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color:#999D99;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+.footer-icons a:hover{
+  color: white;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+/*//////////////////DIRECTION\\\\\\\\\\\\\\\||\\\\*/
+.outerMap {
+  width: 100%;
+  text-align: center;
+  background-color: #222222;
+  height: 100%;
+  border: 1px solid black;
+}
+.map {
+  display: inline-block;
+}
+.directions h1 {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+  color: #999D99;
+}
+.directions h2 {
+  color: #999D99;
+}
+.steps ol {
+  border: 1px solid #B41724;
+}
+.directions li {
+  color: #999D99;
+  text-align: left;
+}
+.steps {
+  float: left;
+  width: 45%
+}
+.intro {
+    width: 45%;
+}
+.intro span{
+  color: #999D99;
+  text-align: left;
+  display: block;
+  border: 1px solid #B41724;
+  padding: 15px;
+}
+/*//////////////////////RESULTS PAGE//////////////////////////*/
+table{
+  border-collapse: collapse;
+}
+table, th, td {
+    border: 1.5px solid black;
+}
+th{
+  height: 50px;
+  vertical-align: middle;
+  font-size: 23px;
+  text-align: center;
+}
+.redTable{
+    background-color: #B41724;
+    color: white;
+    text-align: center;
+}
+.blueTable{
+   background-color: #0D2E60;
+   color: white;
+   text-align: center;
+}
+/*td:hover {
+  color: #red;
+  opacity: 0.4;
+}*/
+.hof {
+  background-color: #222222;
+  width: 100%;
+}
+.hof h1{
+  color: #999D99;
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+}
+.hof p {
+  color: #999D99;
+  text-align: center;
+  font-size: 30px;
+}
+td {
+  color: #999D99;
+  font: sans-serif;
+  text-align: center;
+  font-size: 18px;
+}
+.results img{
+  max-height: 14px;
+  max-width: 25px;
+}
+/*/////////////////////PAST RESULTS\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+.winners{
+  background-color: #222222;
+}
+.winners h1{
+  margin: 0 auto;
+  color: #999D99;
+  text-align: center;
+}
+/*//////////////////////CONTACT///////////////////////////////////////*/
+.contact {
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+}
+.contact h1 {
+  margin: 0 auto;
+  border: 1px solid black;
+  color: #999D99;
+  text-align: center;
+}
+/*///////////////////////////HISTORY/////////////////////////////////*/
+.history {
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+  color: #999D99;
+  height: 100vh;
+}
+.history img {
+  max-width: 100vw;
+  padding: none;
+}
+.history h1 {
+  color:#999D99;
+  text-align: center;
+  margin: 0;
+}
+.history p{
+  color: #999D99;
+  font-family: sans-serif;
+}
+.history h3 {
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #B41724;
+}
+.history h1{
+    margin: 0;
+    text-align: center;
+}
+.history .answer{
+  border: 1px solid #0D2E60;
+  float: right;
+}
+.decade{
+  flex-flow: row;
+  width: 25%;
+  float: left;
+  max-height: 600px;
+  overflow: auto;
+}
+.decade img{
+  flex: 1;
+}
+.history #accordion{
+  width: 65%;
+  float: right;
+  padding-right: 15px;
+  margin: 15px;
+}
+
+/*///////////////////////////CIRCUT MAP//////////////////////////////*/
+.map {
+  background-color: #222222;
+}
+.map img{
+  width: 100vw;
+}
+.map h1 {
+  color: #999D99;
+}
+/*////////////////////////////RULES////////////////////////////////*/
+.trackBanner{
+  background-color: #222222;
+  padding: 0 auto;
+  margin: 0 auto;
+  color: #999D99;
+  font-size: 50px;
+}
+.rules {
+  background-color: #222222;
+  color: #999D99;
+  border: 1px solid black;
+}
+.rules h1{
+    margin: 0;
+}
+.rules ul {
+  margin:0;
+}
+.drivers{
+  border: 1px solid black;
+}
+.spectators {
+  border: 1px solid black;
+}
+/*///////////////////////////FAQ///////////////////////////////////////////*/
+.faq {
+  background-color: #222222;
+  color: #999D99;
+  margin: 0 auto;
+  padding: 0 auto;
+  height: 100vh;
+}
+.faq h3 {
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #B41724;
+}
+.faq h1{
+    margin: 0;
+    text-align: center;
+}
+.faq .answer{
+  border: 1px solid #0D2E60;
+}
+/*//////////////Calendar/////////////////////////////*/

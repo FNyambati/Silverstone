@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "56b3c51e2cd4385a9e8c32dd",
+    "bike": "Yamaha YZF-R3",
+    "difficulty": "Novice",
+    "cc": 321,
+    "description": "An all around bike made for beginners",
+    "topSpeed": 111,
+    "sixty": "5.1",
+    "price": 121,
+    "img": "http://images.motorcycle-usa.com/PhotoGallerys/2015-Yamaha-R3-1.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "56b3c9812cd4385a9e8c32de",
+    "bike": "Kawasaki Ninja ZX-6R",
+    "difficulty": "Intermediate",
+    "cc": 636,
+    "description": "The ZX-6R was made for beginners and more experienced riders alike.",
+    "topSpeed": 164,
+    "sixty": "3.0",
+    "price": 158,
+    "img": "http://images.motorcycle-usa.com/PhotoGallerys/13-kawasaki-zx6r-104.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "56b3ca252cd4385a9e8c32df",
+    "bike": "Yamaha YZF-R1",
+    "difficulty": "Advanced",
+    "cc": 1038,
+    "description": "A more aggressive bike for the seasoned riders out there",
+    "topSpeed": 190,
+    "sixty": "2.8",
+    "price": 175,
+    "img": "http://www.motorcyclistonline.com/sites/motorcyclistonline.com/files/images/2014/11/15spbk_r1_a3_032_1.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "56b3cb012cd4385a9e8c32e0",
+    "bike": "Kawasaki H2-R",
+    "difficulty": "Expert",
+    "cc": 1441,
+    "description": "The Ultimate track motorcycle, ride at your own risk!",
+    "topSpeed": 225,
+    "sixty": "2.5",
+    "price": 201,
+    "img": "https://i.ytimg.com/vi/N3QvX24iBiE/maxresdefault.jpg",
+    "__v": 0
+  }
+]

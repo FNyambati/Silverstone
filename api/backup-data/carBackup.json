@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "56b3cd972cd4385a9e8c32e1",
+    "car": "Subaru WRX STI",
+    "difficulty": "Beginner",
+    "horsepower": 305,
+    "description": "Great for drivers new to the track, great handling, fast but not too fast.",
+    "topSpeed": 155,
+    "sixty": "4.5",
+    "price": 180,
+    "img": "http://www.torquenews.com/sites/default/files/image-1084/a-canada_wrx_sti_2016.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "56b3ceb62cd4385a9e8c32e2",
+    "car": "BMW M4",
+    "difficulty": "Intermediate",
+    "horsepower": 425,
+    "description": "BMW continues their excellent racing pedigree with the M4, a super-quick car on the Track.",
+    "topSpeed": 190,
+    "sixty": "4.1",
+    "price": 205,
+    "img": "http://i1.mirror.co.uk/incoming/article3724273.ece/ALTERNATES/s615/BMW-M4-coupe.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "56b3cf622cd4385a9e8c32e3",
+    "car": "Nissan GT-R NISMO",
+    "difficulty": "Advanced",
+    "horsepower": 600,
+    "description": "The Best bang for your buck supercar out there, can compete with, and beat, the best of the best",
+    "topSpeed": 210,
+    "sixty": "2.7",
+    "price": 240,
+    "img": "http://media.caranddriver.com/images/14q2/584476/2015-nissan-gt-r-nismo-test-review-car-and-driver-photo-605485-s-429x262.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "56b3d0d52cd4385a9e8c32e4",
+    "car": "McLaren 675LT",
+    "difficulty": "Expert",
+    "horsepower": 680,
+    "description": "The Most aggressive track car you'll ever see. Made right here in the U.K",
+    "topSpeed": 230,
+    "sixty": "2.5",
+    "price": 295,
+    "img": "http://images.cdn.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/amclaren_675lt_spider_1.jpg?itok=59qjGd3o",
+    "__v": 0
+  }
+]
