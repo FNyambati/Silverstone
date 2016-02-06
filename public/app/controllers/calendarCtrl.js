@@ -14,7 +14,7 @@ angular.module('myApp').controller('calendarCtrl', function($scope) {
       eventLimit: true, // allow "more" link when too many events
       events: [{
         title: 'All Day Event',
-        start: '2016-01-01'
+        start: '2016-02-06'
       }, {
         title: 'Long Event',
         start: '2016-01-07',

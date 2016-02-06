@@ -1,19 +1,24 @@
 <nav>
-<ul class="nav nav-tabs" style="background-color: #222222;">
-  <li role="presentation"><a ui-sref="experience"style="color:#999D99">INTRODUCTION</a></li>
-  <li role="presentation"><a ui-sref="vip"style="color:#999D99">V.I.P</a></li>
-  <li role="presentation"class="active"><a ui-sref="cars"style="background-color:#0D2E60;color:#999D99">CAR RENTAL</a></li>
-  <li role="presentation"><a ui-sref="bikes"style="color:#999D99">BIKE RENTAL</a></li>
-</ul>
+  <ul class="nav nav-tabs" style="background-color: #222222;">
+    <li role="presentation"><a ui-sref="experience" style="color:#999D99">INTRODUCTION</a></li>
+    <li role="presentation"><a ui-sref="vip" style="color:#999D99">V.I.P</a></li>
+    <li role="presentation" class="active"><a ui-sref="cars" style="background-color:#0D2E60;color:#999D99">CAR RENTAL</a></li>
+    <li role="presentation"><a ui-sref="bikes" style="color:#999D99">BIKE RENTAL</a></li>
+  </ul>
 </nav>
-<div class="cars" ng-repeat="car in cars">
-        <img ng-src="{{car.img}}">
-        <br>car: {{car.car}}
-        <br> difficulty: {{car.difficulty}}
-        <br> Description: {{car.description}}
-        <br> Price: ${{car.price}}
-        <br> horsepower: {{car.horsepower}} HP
-        <br> 0-60: ${car.sixty}} seconds
-        <br> Top Speed: {{car.topSpeed}} MPH
-        <hr>
-    </div>
+<div class="rent"><h1>CARS AVAILABLE FOR RENT</h1></div>
+<div class="outerRent">
+<div class="image" ng-repeat="car in cars">
+
+  <img ng-src="{{car.img}}">
+              <h2>
+                <span>{{car.car}}</span>
+                <br> <span>Horsepower: {{car.horsepower}} HP</span>
+                <br> <span>0-60: {{car.sixty}} seconds</span>
+                <br> <span>Top Speed: {{car.topSpeed}} MPH</span>
+                <br><span>Difficulty: {{car.difficulty}}</span>
+                <br><span>{{car.description}}</span>
+                <br> <span>Price: £{{car.price}}/per day</span>
+              </h2>
+            </div>
+</div>

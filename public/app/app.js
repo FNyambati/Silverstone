@@ -14,9 +14,9 @@ angular.module('myApp', ['ui.router'])
       templateUrl: "/views/info.html",
       controller: "infoCtrl"
     })
-    .state('datesIntro', {
-      url: '/datesIntro',
-      templateUrl: "/views/datesIntro.html"
+    .state('eventsIntro', {
+      url: '/eventsIntro',
+      templateUrl: "/views/eventsIntro.html"
     })
     .state('experience', {
       url: '/experience',
@@ -90,7 +90,9 @@ angular.module('myApp', ['ui.router'])
     })
     .state('planner', {
       url:'/planner',
-      templateUrl:'/views/planner.html'
+      templateUrl:'/views/planner.html',
+      controller:'carCtrl'
+
     })
     ///////////OPTIONAL ROUTES FOR RESULTS PAGE IF AMPLE TIME ////////////////////////////
     .state('sportscars', {
@@ -101,4 +103,15 @@ angular.module('myApp', ['ui.router'])
       url:'/gt',
       templateUrl:'/views/gt.html'
     });
+})
+
+.directive('navbarDir', function() {
+  return {
+    templateUrl: '/views/navBar.html'
+  };
+})
+.directive('footerDir', function() {
+  return {
+    templateUrl: '/views/footer.html'
+  };
 });
