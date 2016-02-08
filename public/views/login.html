@@ -1,1 +1,98 @@
-<div class="login"></div>
+<div class="login">
+  <h1>LOGIN</h1>
+
+      <!--            LOG IN FORM       -->
+  <div class="container">
+    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <div class="panel panel-info" style="background-color: #222222;">
+        <div class="panel-heading" style="background-color: #B41724;color:#bec0be;">
+          <div class="panel-title" style="color:#bec0be; font-size:25px">Sign In</div>
+          <div style="float:right; font-size: 90%; position: relative; top:-10px;"><a href="#" style="color: #bec0be">Forgot password?</a></div>
+        </div>
+        <div style="padding-top:30px" class="panel-body">
+          <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+          <form id="loginform" class="form-horizontal" role="form">
+            <div style="margin-bottom: 25px" class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email" style="background-color: #4d4d4d;color:#f2f2f2">
+            </div>
+            <div style="margin-bottom: 25px" class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input id="login-password" type="password" class="form-control" name="password" placeholder="password" style="background-color: #4d4d4d;color:#f2f2f2">
+            </div>
+            <div class="input-group">
+              <div class="checkbox">
+                <label style="color:#bec0be;">
+                  <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                </label>
+              </div>
+            </div>
+            <div style="margin-top:10px" class="form-group">
+              <!-- Button -->
+              <div class="col-sm-12 controls">
+                <a id="btn-login" href="#" class="btn btn-success" style="background-color: #0D2E60;color:#999D99;border:1px solid #bec0be;">Login  </a>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-12 control">
+                <div style="border-top: 1px solid #B41724; padding-top:15px; font-size:85%;color:#bec0be">
+                  Don't have an account!
+                  <a ui-sref="#" style="color: #B41724;font-size:16px" onClick="$('#loginbox').hide(); $('#signupbox').show()">Sign Up Here</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--            SIGN UP FORM      -->
+    <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <div class="panel panel-info">
+        <div class="panel-heading"style="background-color: #B41724;color:#bec0be;">
+          <div class="panel-title"style="color:#bec0be; font-size:25px">Sign Up</div>
+          <div style="float:right; font-size: 90%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+        </div>
+        <div class="panel-body" style="background-color: #222222;">
+          <form id="signupform" class="form-horizontal" role="form">
+
+            <div id="signupalert" style="display:none" class="alert alert-danger">
+              <p>Error:</p>
+              <span></span>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-md-3 control-label"style="color:#bec0be;">Email</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="email" placeholder="Email Address"style="background-color: #4d4d4d;color:#f2f2f2">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="firstname" class="col-md-3 control-label"style="color:#bec0be;">First Name</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="firstname" placeholder="First Name"style="background-color: #4d4d4d;color:#f2f2f2">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lastname" class="col-md-3 control-label"style="color:#bec0be;">Last Name</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="lastname" placeholder="Last Name"style="background-color: #4d4d4d;color:#f2f2f2">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-md-3 control-label"style="color:#bec0be;">Password</label>
+              <div class="col-md-9">
+                <input type="password" class="form-control" name="passwd" placeholder="Password"style="background-color: #4d4d4d;color:#f2f2f2">
+              </div>
+            </div>
+            <div class="form-group">
+              <!-- Button -->
+              <div class="col-md-offset-3 col-md-9">
+                <button id="btn-signup" type="button" class="btn btn-info"style="background-color:#0D2E60; color:#999D99;border:1px solid #bec0be;"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
