@@ -11,8 +11,13 @@ angular.module('myApp', ['ui.router'])
     })
     .state('info', {
       url: '/info',
-      templateUrl: "/views/info.html",
-      controller: "infoCtrl"
+      templateUrl: "/views/info.html"
+      // controller: "infoCtrl"
+    })
+    .state('history', {
+      url: '/history',
+      templateUrl: "/views/history.html",
+      controller: "historyCtrl"
     })
     .state('eventsIntro', {
       url: '/eventsIntro',
@@ -47,7 +52,23 @@ angular.module('myApp', ['ui.router'])
     })
     .state('login', {
       url:'/login',
-      templateUrl:'/views/login.html'
+      templateUrl:'/views/login.html',
+      controller: 'userCtrl'
+    })
+    .state('profile', {
+      url:'/myProfile',
+      templateUrl: '/views/profile.html',
+      controller: 'profileCtrl',
+      resolve: {
+        user: function(userService, $state) {
+          return userService.getCurrentUser().then(function(response){
+            if(response.status !== 200){
+              $state.go('login');
+            }
+            return response.data;
+          });
+        }
+      }
     })
     .state('hof', {
       url: '/hof',

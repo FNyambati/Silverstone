@@ -3,12 +3,22 @@ var express     = require('express'),
     bodyParser  = require('body-parser'),
     cors        = require('cors'),
     mongoose    = require('mongoose'),
-    session     = require('express-session');
+    session     = require('express-session'),
+    config      = require('./config'),
+    passport    = require('./services/passport');
+
+
 //CONTROLLERS
 var laptimeCtrl = require('./controllers/laptimeController');
 var winnersCtrl = require('./controllers/winnersController');
 var carCtrl = require('./controllers/carController');
 var bikeCtrl = require('./controllers/bikeController');
+var userCtrl = require('./controllers/userController');
+//POLICES/////////
+var isAuthed = function(req, res, next) {
+  if (!req.isAuthenticated()) return res.status(401).send();
+  return next();
+};
 
 // App definition//////////
 var app = express();
@@ -17,7 +27,26 @@ var app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(__dirname + "./../public"));
+app.use(session({
+  secret: config.SESSION_SECRET,
+  saveUninitialized: false,
+  resave: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 // ENDPOINTS///////////////////
+// USERS /////////////////
+app.post('/users', userCtrl.register);
+app.get('/me', isAuthed, userCtrl.me);
+app.put('/users/:_id', isAuthed, userCtrl.update);
+
+app.post('/login', passport.authenticate('local', {
+  successRedirect: '/me'
+}));
+app.get('/logout', function(req, res, next) {
+  req.logout();
+  return res.status(200).send('logged out');
+});
 // LAPTIMES////
 app.post('/laptime', laptimeCtrl.create);
 app.get('/laptime', laptimeCtrl.read);

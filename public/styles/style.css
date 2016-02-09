@@ -349,6 +349,40 @@ td {
   color: #999D99;
   text-align: center;
 }
+.weather {
+  margin: 0;
+}
+/*///////////////////////////INFO/////////////////////////////////*/
+.info{
+  background-color: #222222;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.info h1 {
+  text-align: center;
+  color: #999D99;
+  margin: 0;
+}
+.weather {
+  width: 40%;
+  padding-left: 140px;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+}
+.weather h2{
+  text-align: center;
+  margin: 0px 40px 0px 40px;
+  color: #999D99;
+  position: absolute;
+  top: 0px;
+}
+.infoBody{
+  width: 45%;
+  height: 100%;
+  color: #999D99;
+}
 
 /*///////////////////////////HISTORY/////////////////////////////////*/
 
@@ -591,4 +625,21 @@ td {
 }
 input[type=radio] {
   margin-left: 10px;
+}
+/*///////////////////F1 COUNTDOWN //////////////////////*/
+.f1 img {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+/*/////////////////////MY PROFILE //////////////////////*/
+.myProfile {
+  background-color: #222222;
+  height: 100vh;
+  width: 100vw;
+  color: #999D99;
+}
+.profileBanner {
+  margin: 0;
+  text-align: center;
 }
