@@ -66,6 +66,7 @@ body {
   text-align: left;
   font: bold 16px sans-serif;
   padding: 55px 50px;
+  border-top: 2px solid #999D99
 }
 .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
   display: inline-block;
@@ -626,6 +627,22 @@ td {
 input[type=radio] {
   margin-left: 10px;
 }
+.carPicker select {
+  width: 240px;
+     height: 34px;
+     overflow: hidden;
+     background: url(new_arrow.png) no-repeat right #0D2E60;
+     border: 1px solid #ccc;
+
+}
+.bikePicker select {
+  width: 240px;
+     height: 34px;
+     overflow: hidden;
+     background: url(new_arrow.png) no-repeat right #0D2E60;
+     border: 1px solid #ccc;
+
+}
 /*///////////////////F1 COUNTDOWN //////////////////////*/
 .f1 img {
   z-index: -1;
@@ -639,7 +656,35 @@ input[type=radio] {
   width: 100vw;
   color: #999D99;
 }
+.myProfile h3 {
+  text-align: center;
+  border-bottom: 1px solid #999D99;
+  line-height: 57px;
+  color: #e6e6e6;
+  opacity: 0.75;
+}
 .profileBanner {
   margin: 0;
   text-align: center;
+}
+.profileInfo {
+  border: 2px solid green;
+  width: 35%;
+  height: 96%;
+  float: left;
+  padding: 25px;
+}
+
+.profileEvents {
+  border: 2px dotted red;
+  width: 65%;
+  height: 96%;
+  float: left;
+  padding: 25px;
+}
+.legend{
+  color: #999D99;
+}
+i {
+  color: #f2f2f2;
 }
