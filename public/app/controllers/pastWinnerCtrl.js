@@ -9,15 +9,15 @@ angular.module('myApp').controller('pastWinnerCtrl', function ($scope, winnerSer
     };
 
     $scope.addWinner = function () {
-        winnerService.addWinner($scope.newYear, $scope.newDriver, $scope.newTeam).then(function (res) {
+        winnerService.addWinner($scope.newYear, $scope.newDriver, $scope.newTeam, $scope.newImg).then(function (res) {
             console.log(res);
             $scope.getWinners();
         });
     };
 
-    $scope.editWinner = function (year, driver, team) {
+    $scope.editWinner = function (year, driver, team, img) {
         console.log(year, driver, team);
-        winnerService.editWinner(year, driver, team).then(function (res) {
+        winnerService.editWinner(year, driver, team, img).then(function (res) {
             console.log(res);
             $scope.getWinners();
         });

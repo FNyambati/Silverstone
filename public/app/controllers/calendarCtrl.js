@@ -20,10 +20,6 @@ angular.module('myApp').controller('calendarCtrl', function($scope) {
         start: '2016-01-07',
         end: '2016-01-10'
       }],
-      themeButtonIcons: {
-        prev: 'circle-triangle-w',
-        next: 'circle-triangle-e',
-      }
     });
 
   });

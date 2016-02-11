@@ -12,6 +12,9 @@ var winnerSchema = mongoose.Schema({
   team: {
     type: String,
     required: true
+  },
+  img: {
+    type: String
   }
 });
 

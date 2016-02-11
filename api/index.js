@@ -38,7 +38,7 @@ app.use(passport.session());
 // ENDPOINTS///////////////////
 // USERS /////////////////
 app.post('/users', userCtrl.register);
-app.get('/me', isAuthed, userCtrl.me);
+app.get('/me', isAuthed, userCtrl.getCurrentUser);
 app.put('/users/:_id', isAuthed, userCtrl.update);
 
 app.post('/login', passport.authenticate('local', {
@@ -72,7 +72,6 @@ app.delete('/bike/:id', bikeCtrl.delete);
 app.post('/profile', profileCtrl.create);
 app.get('/profile', profileCtrl.read);
 app.put('/profile/:id', profileCtrl.update);
-app.delete('/profile/:id', profileCtrl.delete);
 //CONNECTIONS TO MONGO AND PORT /////////
 var mongoURI = config.MONGO_URI;
 var port = config.PORT;

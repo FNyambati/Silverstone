@@ -314,27 +314,15 @@ td {
 
 .winners {
   background-color: #222222;
+  height: 100%;
+  width: 100%;
 }
 .winners h1 {
   margin: 0 auto;
+  padding-top: 10px;
+  margin-bottom: 15px;
   color: #999D99;
   text-align: center;
-}
-
-/*/////////////////////SPORTSCARS////////////////////////////*/
-
-.sportscars {
-  background-color: #222222;
-  height: 100vh;
-  width: 100vw;
-}
-
-/*///////////////////////FIA GT /////////////////////////////*/
-
-.gt {
-  background-color: #222222;
-  height: 100vh;
-  width: 100vw;
 }
 
 /*//////////////////////CONTACT///////////////////////////////////////*/
@@ -365,26 +353,106 @@ td {
   color: #999D99;
   margin: 0;
 }
-.weather {
-  width: 40%;
-  padding-left: 140px;
-  position: absolute;
-  top: 100px;
-  right: 0px;
+.scrollPhoto{
+  width: 1000px;
+overflow: hidden;
+margin: 50px auto;
+margin-top: 0px;
+background: #222222;
 }
-.weather h2{
-  text-align: center;
-  margin: 0px 40px 0px 40px;
-  color: #999D99;
-  position: absolute;
-  top: 0px;
+.infoBanner {
+  width: 800px;
+	margin: 40px auto;
 }
-.infoBody{
-  width: 45%;
-  height: 100%;
-  color: #999D99;
+.photobanner {
+	height: 233px;
+	width: 3550px;
+	margin-bottom: 50px;
+}
+.photobanner img {
+  max-width: 500px;
+  max-height: 300px;
 }
 
+/*keyframe animations*/
+.first {
+ -webkit-animation: bannermove 30s linear infinite;
+    -moz-animation: bannermove 30s linear infinite;
+     -ms-animation: bannermove 30s linear infinite;
+      -o-animation: bannermove 30s linear infinite;
+         animation: bannermove 30s linear infinite;
+}
+
+@keyframes "bannermove" {
+ 0% {
+    margin-left: 0px;
+ }
+ 100% {
+    margin-left: -2125px;
+ }
+
+}
+
+@-moz-keyframes bannermove {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+
+}
+
+@-webkit-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+
+}
+
+@-ms-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+
+}
+
+@-o-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+
+
+}
+.photobanner img {
+ -webkit-transition: all 0.5s ease;
+ -moz-transition: all 0.5s ease;
+ -o-transition: all 0.5s ease;
+ -ms-transition: all 0.5s ease;
+ transition: all 0.5s ease;
+}
+
+.photobanner img:hover {
+ -webkit-transform: scale(1.1);
+ -moz-transform: scale(1.1);
+ -o-transform: scale(1.1);
+ -ms-transform: scale(1.1);
+ transform: scale(1.1);
+ cursor: pointer;
+
+ -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+ -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+ box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+}
 /*///////////////////////////HISTORY/////////////////////////////////*/
 
 .history {
@@ -424,14 +492,15 @@ td {
 .decade {
   flex-flow: row;
   width: 25%;
-  float: left;
-  max-height: 600px;
-  overflow: auto;
+  float: right;
+  height:70%;
+  overflow: hidden;
 }
 .decade img {
   flex: 1;
   height: 100%;
-  width: 100%;
+  max-width: 290px;
+  max-height: 250px;
 }
 .history #accordion {
   width: 65%;
@@ -441,6 +510,11 @@ td {
 }
 .timeline {
   min-height: 600px;
+}
+marquee {
+  height: 600px;
+  width: 290px;
+  overflow: hidden;
 }
 
 /*///////////////////////////CIRCUT MAP//////////////////////////////*/
@@ -685,6 +759,56 @@ input[type=radio] {
 .legend{
   color: #999D99;
 }
-i {
-  color: #f2f2f2;
+
+
+
+
+
+
+
+
+
+
+/* ///////////////// VIP /////////////////////////////*/
+.vipBanner{
+  color: #999D99;
+  text-align: center;
+  margin: 0px;
+}
+.panel-pricing {
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+}
+.panel-pricing:hover {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+.panel-pricing .panel-heading {
+  padding: 20px 10px;
+}
+.panel-pricing .panel-heading .fa {
+  margin-top: 10px;
+  font-size: 58px;
+}
+.panel-pricing .list-group-item {
+  color: #777777;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+}
+.panel-pricing .list-group-item:last-child {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.panel-pricing .list-group-item:first-child {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.panel-pricing .panel-body {
+  background-color: #f0f0f0;
+  font-size: 40px;
+  color: #777777;
+  padding: 20px;
+  margin: 0px;
+}
+.list-group-item .fa {
+  font-size: 20px;
 }

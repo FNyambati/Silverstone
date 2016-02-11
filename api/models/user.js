@@ -7,7 +7,7 @@ var User = new mongoose.Schema({
     last:  {type:String}
   },
   email: { type: String, index: true, trim: true },
-  password: { type: String }
+  password: { type: String },
 });
 
 User.pre('save', function(next) {

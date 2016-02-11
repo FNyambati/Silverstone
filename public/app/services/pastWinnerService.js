@@ -11,7 +11,7 @@ angular.module('myApp').service('winnerService', function ($http) {
         });
     };
 
-    this.addWinner = function (year, driver, team) {
+    this.addWinner = function (year, driver, team, img) {
         return $http({
 
             method: 'POST',
@@ -19,7 +19,8 @@ angular.module('myApp').service('winnerService', function ($http) {
             data: {
                 year: year,
                 driver: driver,
-                team: team
+                team: team,
+                img: img
             }
         }).then(function (res) {
             console.log(res);
@@ -27,14 +28,15 @@ angular.module('myApp').service('winnerService', function ($http) {
         });
     };
 
-    this.editWinner = function (year, driver, team) {
+    this.editWinner = function (year, driver, team, img) {
         return $http({
             method: 'PUT',
             url: '/winner/' + id,
             data: {
                 year: year,
                 driver: driver,
-                team: team
+                team: team,
+                img: img
             },
         }).then(function (res) {
             console.log(res);

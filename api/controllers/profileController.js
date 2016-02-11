@@ -15,13 +15,14 @@ module.exports = {
     },
 
      read: function(req, res) {
+        var userID = req.user._id;
         Profile
-        .find({})
+        .findOne({user: userID})
         .exec(function(err, result) {
+          console.log(result);
           if (err) {
               res.status(500).send(err);
           } else {
-              console.log(res);
               res.send(result);
           }
         });
@@ -36,14 +37,4 @@ module.exports = {
           }
         });
     },
-
-    delete: function(req, res) {
-        Profile.findByIdAndRemove(req.params.id, function(err, result) {
-          if (err) {
-              return res.status(500).send(err);
-          } else {
-              res.send(result);
-          }
-        });
-    }
 };

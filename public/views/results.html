@@ -1,22 +1,30 @@
-<nav>
-<ul class="nav nav-tabs" style="background-color: #222222;">
-  <li role="presentation"class="active"><a ui-sref="results"style="background-color:#0D2E60;color:#999D99">F1 WINNERS</a></li>
-  <li role="presentation"><a ui-sref="gt"style="color:#999D99">FIA GT WINNERS</a></li>
-  <li role="presentation"><a ui-sref="sportscars"style="color:#999D99">WORLD SPORTSCARS WINNERS</a></li>
-</ul>
-</nav>
 <div class="winners">
-<h1>F1 SILVERSTONE GP WINNERS</h1>
-<table style="width:100%">
-  <tr>
-    <th class="blueTable">Year</th>
-    <th class="redTable">Driver</th>
-    <th class="blueTable">Team</th>
-  </tr>
-  <tr ng-repeat="winner in winners">
-    <td>{{winner.year}}</td>
-    <td>{{winner.driver}}<!-- {{winner.flag}}</td> LOW PRIORITY!!! DO IF YOU HAVE AMPLE TIME-->
-    <td>{{winner.team}}</td>
-  </tr>
-</table>
+  <h1>F1 SILVERSTONE GP WINNERS</h1>
+  <div class="scrollPhoto">
+    <div class="photobanner">
+      <img class="first" src="/images/podium1.jpg" alt="" />
+      <img src="/images/podium2.jpg" alt="" />
+      <img src="/images/podium3.jpg" alt="" />
+      <img src="/images/podium4.jpg" alt="" />
+      <img src="/images/podium5.jpg" alt="" />
+      <img src="/images/podium6.jpg" alt="" />
+      <img src="/images/podium7.jpg" alt="" />
+      <img src="/images/podium8.jpg" alt="" />
+      <img src="/images/podium9.jpg" alt="" />
+      <img src="/images/podium10.jpg" alt="" />
+    </div>
+  </div>
+  <table style="width:100%">
+    <tr>
+      <th class="blueTable">Year</th>
+      <th class="redTable">Driver</th>
+      <th class="blueTable">Team</th>
+    </tr>
+    <tr ng-repeat="winner in winners">
+      <td>{{winner.year}}</td>
+      <td>{{winner.driver}}&nbsp;&nbsp;&nbsp;<img ng-src="{{winner.img}}"></td>
+      <!-- {{winner.flag}}</td> LOW PRIORITY!!! DO IF YOU HAVE AMPLE TIME-->
+      <td>{{winner.team}}</td>
+    </tr>
+  </table>
 </div>
