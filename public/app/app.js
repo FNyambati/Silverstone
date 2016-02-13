@@ -68,6 +68,7 @@ angular.module('myApp', ['ui.router'])
             return response.data;
           });
         }
+
       }
     })
     .state('hof', {
@@ -87,7 +88,14 @@ angular.module('myApp', ['ui.router'])
     /////////////ROUTES FOR EXPERIENCE PAGE /////////////////////
     .state('vip', {
       url:'/vip',
-      templateUrl:'/views/vip.html'
+      templateUrl:'/views/vip.html',
+      controller: 'vipCtrl',
+      resolve: {
+        profile: function(userService, profileService, $state) {
+        return profileService.getProfileInfo();
+        }
+      }
+
     })
     .state('cars', {
       url:'/cars',
@@ -134,5 +142,10 @@ angular.module('myApp', ['ui.router'])
 .directive('footerDir', function() {
   return {
     templateUrl: '/views/footer.html'
+  };
+})
+.directive('profileForm', function() {
+  return {
+    templateUrl: '/views/profileForm.html'
   };
 });

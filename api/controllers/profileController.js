@@ -22,7 +22,18 @@ module.exports = {
           console.log(result);
           if (err) {
               res.status(500).send(err);
-          } else {
+          }
+          else if(!result){
+            var newProfile = new Profile({user:userID});
+            newProfile.save(function(err, result) {
+              if (err) {
+                  return res.status(500).send(err);
+              } else {
+                  res.send(result);
+              }
+            });
+
+            } else {
               res.send(result);
           }
         });
@@ -31,9 +42,9 @@ module.exports = {
      update: function(req, res) {
         Profile.findByIdAndUpdate(req.params.id, req.body, function(err, result) {
           if (err) {
-              return res.status(500).send(err);
+              res.status(500).send(err);
           } else {
-              res.send(result);
+              res.status(200).send(result);
           }
         });
     },

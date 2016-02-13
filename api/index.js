@@ -8,6 +8,9 @@ var express = require('express'),
   passport = require('./services/passport');
 
 
+
+
+
 //CONTROLLERS
 var laptimeCtrl = require('./controllers/laptimeController');
 var winnersCtrl = require('./controllers/winnersController');
@@ -15,14 +18,20 @@ var carCtrl = require('./controllers/carController');
 var bikeCtrl = require('./controllers/bikeController');
 var userCtrl = require('./controllers/userController');
 var profileCtrl = require('./controllers/profileController');
+var eventCtrl = require('./controllers/eventController');
+
 //POLICES/////////
 var isAuthed = function(req, res, next) {
   if (!req.isAuthenticated()) return res.status(401).send();
   return next();
 };
 
+
+
+
 // App definition//////////
 var app = express();
+
 
 // Middleware/////////
 app.use(cors());
@@ -35,8 +44,12 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-// ENDPOINTS///////////////////
-// USERS /////////////////
+///////////////// ENDPOINTS///////////////////
+
+
+
+
+////////////////////// USERS /////////////////
 app.post('/users', userCtrl.register);
 app.get('/me', isAuthed, userCtrl.getCurrentUser);
 app.put('/users/:_id', isAuthed, userCtrl.update);
@@ -48,30 +61,53 @@ app.get('/logout', function(req, res, next) {
   req.logout();
   return res.status(200).send('logged out');
 });
-// LAPTIMES////
+
+
+/////////////// LAPTIMES//////////////////
 app.post('/laptime', laptimeCtrl.create);
 app.get('/laptime', laptimeCtrl.read);
 app.put('/laptime/:id', laptimeCtrl.update);
 app.delete('/laptime/:id', laptimeCtrl.delete);
-//PAST WINNERS//////
+
+
+/////////////PAST WINNERS//////
 app.post('/winner', winnersCtrl.create);
 app.get('/winner', winnersCtrl.read);
 app.put('/winner/:id', winnersCtrl.update);
 app.delete('/winner/:id', winnersCtrl.delete);
-//CAR RENTAL///////
+
+
+/////////CAR RENTAL///////
 app.post('/car', carCtrl.create);
 app.get('/car', carCtrl.read);
 app.put('/car/:id', carCtrl.update);
 app.delete('/car/:id', carCtrl.delete);
+
+
+
 ////BIKE RENTAL //////////////
 app.post('/bike', bikeCtrl.create);
 app.get('/bike', bikeCtrl.read);
 app.put('/bike/:id', bikeCtrl.update);
 app.delete('/bike/:id', bikeCtrl.delete);
+
+
+
 //////PROFILE INFO///////////////
 app.post('/profile', profileCtrl.create);
 app.get('/profile', profileCtrl.read);
 app.put('/profile/:id', profileCtrl.update);
+
+//////////EVENT INFO /////////////////
+app.post('/event', eventCtrl.create);
+app.get('/event', eventCtrl.read);
+app.get('event/:id', eventCtrl.readUserEvent);
+app.put('/event/:id', eventCtrl.update);
+app.delete('/event/:id',eventCtrl.delete);
+
+///////// ADMIN //////////
+app.get('/pendingEvent', eventCtrl.pendingEvents);
+
 //CONNECTIONS TO MONGO AND PORT /////////
 var mongoURI = config.MONGO_URI;
 var port = config.PORT;

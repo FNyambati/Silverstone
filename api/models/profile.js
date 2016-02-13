@@ -12,8 +12,10 @@ var Profile = new mongoose.Schema({
     type: String,
   },
     phone: {
-    type: String,  },
-  address1: {
+    type: Number
+  },
+
+    address1: {
     type: String,
   },
   address2: {
@@ -35,7 +37,13 @@ var Profile = new mongoose.Schema({
     type: String,
   },
   laptime: {
-    type: String,  }
+    type: String,
+  },
+  isVIP: {
+    type: String,
+    enum: ['Professional', 'World Class', 'Legendary', 'Omega', 'none'],
+    default: 'none'
+  }
 });
 
 module.exports = mongoose.model('profile', Profile);

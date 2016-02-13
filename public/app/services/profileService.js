@@ -17,11 +17,12 @@ angular.module("myApp").service("profileService", function($http) {
     });
   };
   this.editProfile = function(user, editProfile) {
+    console.log('service',user);
     return $http({
       method: 'PUT',
-      url: '/profile/' + user.data._id,
+      url: '/profile/' + editProfile._id,
       data: {
-        user: user.data._id,
+        user: user._id,
         first: editProfile.first,
         last: editProfile.last,
         phone: editProfile.phone,
@@ -32,8 +33,18 @@ angular.module("myApp").service("profileService", function($http) {
         zip: editProfile.zip,
         country: editProfile.country,
         userCar: editProfile.userCar,
-        laptime: editProfile.laptime
+        laptime: editProfile.laptime,
+        isVIP: editProfile.isVIP
       }
+    }).then(function(response) {
+      return response.data;
+    });
+  };
+  this.editProfileVip = function(id, editProfile) {
+    return $http({
+      method: 'PUT',
+      url: '/profile/' + id,
+      data: editProfile
     }).then(function(response) {
       return response.data;
     });

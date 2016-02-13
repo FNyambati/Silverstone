@@ -300,10 +300,11 @@ th {
   font-size: 30px;
 }
 td {
-  color: #999D99;
+  color: #a6a6a6;
   font: sans-serif;
   text-align: center;
   font-size: 18px;
+
 }
 .results img {
   max-height: 14px;
@@ -332,9 +333,13 @@ td {
   height: 100vh;
   background-color: #222222;
 }
+.contactContainer{
+  width: 50%;
+  margin: 0 auto;
+}
 .contact h1 {
   margin: 0 auto;
-  border: 1px solid black;
+
   color: #999D99;
   text-align: center;
 }
@@ -587,11 +592,37 @@ marquee {
 }
 
 /*///////////////////EVENT LIST /////////////////////*/
+.events h2 {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+}
+.image h2 span {
+  color: white;
+  font: bold 20px/45px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+  background: rgb(0, 0, 0);
+  /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+  padding-left: 10px;
+}
 
+
+.events img {
+  padding: 15px 0px 20px 0px;
+  position: relative;
+}
+.outerEvents{
+    width: 100%;
+    background-color: #222222
+}
 .events {
   background-color: #222222;
-  height: 100vh;
-  width: 100vw;
+  max-height: 100%;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 /*//////////////PLANNER/////////////////////////////*/
@@ -612,10 +643,12 @@ marquee {
 }
 .vip {
   background-color: #222222;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
-
+.rowContainer {
+  width: 100%
+}
 /*///////////////////////CARS/////////////////////////////*/
 
 .rent h1 {
@@ -725,9 +758,10 @@ input[type=radio] {
 }
 /*/////////////////////MY PROFILE //////////////////////*/
 .myProfile {
+  padding: 11px;
   background-color: #222222;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   color: #999D99;
 }
 .myProfile h3 {
@@ -737,6 +771,9 @@ input[type=radio] {
   color: #e6e6e6;
   opacity: 0.75;
 }
+.profileBanner h1 {
+  margin: 0;
+}
 .profileBanner {
   margin: 0;
   text-align: center;
@@ -744,7 +781,7 @@ input[type=radio] {
 .profileInfo {
   border: 2px solid green;
   width: 35%;
-  height: 96%;
+  height: 85%;
   float: left;
   padding: 25px;
 }
@@ -752,7 +789,7 @@ input[type=radio] {
 .profileEvents {
   border: 2px dotted red;
   width: 65%;
-  height: 96%;
+  height: 85%;
   float: left;
   padding: 25px;
 }
