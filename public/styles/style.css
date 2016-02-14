@@ -587,26 +587,72 @@ marquee {
 
 .eventsIntro {
   background-color: #222222;
-  height: 100vh;
-  width: 100vw;
-}
-
-/*///////////////////EVENT LIST /////////////////////*/
-.events h2 {
-  position: absolute;
-  top: 100px;
-  left: 0;
+  height: 100%;
   width: 100%;
 }
-.image h2 span {
+
+ul.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.img-list li {
+  display: inline-block;
+  margin: 0 1em 1em 0;
+  position: relative;
+}
+span.text-content {
+  background: rgba(0,0,0,0.85);
   color: white;
-  font: bold 20px/45px Helvetica, Sans-Serif;
-  letter-spacing: -1px;
-  background: rgb(0, 0, 0);
-  /* fallback color */
-  background: rgba(0, 0, 0, 0.7);
-  padding: 8px;
-  padding-left: 10px;
+  cursor: pointer;
+  display: table;
+  height: 385px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 750px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+ -moz-transition: opacity 500ms;
+ -o-transition: opacity 500ms;
+ transition: opacity 500ms;
+}
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+ul.img-list li:hover span.text-content {
+  opacity: 1;
+}
+.planButton {
+  -webkit-border-radius: 19;
+  -moz-border-radius: 19;
+  border-radius: 19px;
+  font-family: Arial;
+  color: #999D99;
+  font-size: 23px;
+  background: #B41724;
+  padding: 10px 20px 10px 20px;
+  border: solid #0D2E60 5px;
+  text-decoration: none;
+  margin: 0 1em 1em 0;
+}
+
+.planButton:hover {
+  background: #0D2e60;
+  text-decoration: none;
+}
+/*///////////////////EVENT LIST /////////////////////*/
+
+.eventList {
+color: #999D99;
+}
+.eventContainer {
+  padding-left: 40px;
 }
 
 
@@ -623,7 +669,9 @@ marquee {
   max-height: 100%;
   max-width: 50%;
   margin: 0 auto;
+  color: #999D99;
 }
+
 
 /*//////////////PLANNER/////////////////////////////*/
 

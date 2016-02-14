@@ -1,8 +1,11 @@
 angular.module('myApp').controller('profileCtrl', function($scope, $state, profileService, userService, user) {
+
   $scope.user = user;
+  console.log(user + 'console logged user before profile info');
   $scope.getProfileInfo = function() {
     profileService.getProfileInfo().then(function(res) {
       console.log(res);
+      // console.log(user);
       $scope.profile = res.data;
       $scope.editProfile = {
         first: res.data.first,

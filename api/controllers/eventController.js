@@ -1,4 +1,7 @@
 var Event = require('./../models/event');
+var Car = require('./../models/car');
+var Bike = require('./../models/bike');
+var User = require('.././models/user');
 
 
 
@@ -8,7 +11,10 @@ module.exports = {
         var newEvent = new Event(req.body);
         newEvent.save(function(err, result) {
           if (err) {
+
+            console.log(err);
               return res.status(500).send(err);
+
           } else {
               res.send(result);
           }

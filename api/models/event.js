@@ -7,28 +7,26 @@ var eventSchema = Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user'
   },
+  userName: {
+    type: String
+  },
   group: {
     type: Number
   },
-  name: {
+  host: {
     type: String
   },
-  date: {
+  // rentedCar: {
+  //   type: String
+  // },
+  // rentedBike: {
+  //   type: String
+  // },
+  title: {
     type: String
   },
-  type: {
-    trackDay:{
-      type: Boolean
-    },
-    tournament: {
-      type: Boolean
-    },
-    education:{
-      type: Boolean
-    },
-    meetUp:{
-      type: Boolean
-    },
+  start: {
+    type: String
   },
   bike: {
     type: mongoose.Schema.Types.ObjectId,
@@ -38,10 +36,9 @@ var eventSchema = Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'car'
   },
-  allowed: {
-    type: Boolean,
-    default: false
-  }
+  img: {
+    type: String
+  },
 });
 
-module.exports = mongoose.model('event' ,eventSchema);
+module.exports = mongoose.model('event', eventSchema);

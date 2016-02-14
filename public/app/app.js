@@ -19,10 +19,6 @@ angular.module('myApp', ['ui.router'])
       templateUrl: "/views/history.html",
       controller: "historyCtrl"
     })
-    .state('eventsIntro', {
-      url: '/eventsIntro',
-      templateUrl: "/views/eventsIntro.html"
-    })
     .state('experience', {
       url: '/experience',
       templateUrl: "/views/experience.html"
@@ -71,6 +67,11 @@ angular.module('myApp', ['ui.router'])
 
       }
     })
+    .state('eventsIntro', {
+      url: '/eventsIntro',
+      templateUrl: "/views/eventsIntro.html",
+      controller: 'eventsIntroCtrl'
+    })
     .state('hof', {
       url: '/hof',
       templateUrl:'views/hof.html',
@@ -110,18 +111,24 @@ angular.module('myApp', ['ui.router'])
     ///////////////////ROUTES FOR EVENTS PAGE//////////////////////////
     .state('events', {
       url:'/events',
-      templateUrl:'/views/events.html'
+      templateUrl:'/views/events.html',
+      controller: 'eventCtrl',
+      resolve: {
+        user: function(userService, $state) {
+          return userService.getCurrentUser().then(function(response){
+            if(response.status !== 200){
+              $state.go('login');
+            }
+            return response.data;
+          });
+        }
+
+      }
     })
     .state('calendar', {
       url:'/calendar',
       templateUrl:'/views/calendar.html',
       controller: 'calendarCtrl'
-    })
-    .state('planner', {
-      url:'/planner',
-      templateUrl:'/views/planner.html',
-      controller:'carCtrl'
-
     })
     ///////////OPTIONAL ROUTES FOR RESULTS PAGE IF AMPLE TIME ////////////////////////////
     .state('sportscars', {

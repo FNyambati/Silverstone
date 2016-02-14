@@ -99,14 +99,23 @@ app.get('/profile', profileCtrl.read);
 app.put('/profile/:id', profileCtrl.update);
 
 //////////EVENT INFO /////////////////
+app.get('/events', eventCtrl.read);  //DONT FORGET TO USE THE 'S' AT THE END OF ENDPOINT
 app.post('/event', eventCtrl.create);
-app.get('/event', eventCtrl.read);
+app.get('/events', eventCtrl.read);
 app.get('event/:id', eventCtrl.readUserEvent);
-app.put('/event/:id', eventCtrl.update);
 app.delete('/event/:id',eventCtrl.delete);
 
-///////// ADMIN //////////
-app.get('/pendingEvent', eventCtrl.pendingEvents);
+
+
+
+///////// ADMIN FUNCTIONS//////////
+
+
+
+app.get('/pendingEvents', eventCtrl.pendingEvents);
+app.put('/event/:id', eventCtrl.update);
+
+
 
 //CONNECTIONS TO MONGO AND PORT /////////
 var mongoURI = config.MONGO_URI;
