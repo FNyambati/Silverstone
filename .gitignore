@@ -2,3 +2,4 @@ node_modules
 videos
 images
 config.js
+.DS_Store

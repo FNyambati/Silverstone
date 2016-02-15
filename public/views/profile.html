@@ -1,30 +1,24 @@
 <div class="myProfile">
-  <div class="profileBanner"><h1>MY PROFILE</h1><span><button type="button" class="btn btn-primary btn-lg"style="background-color: #B41724;border: 2px solid #0D2E60"ng-click="logout(user)">LOGOUT</button></span></div>
+  <div class="profileBanner">
+    <h1>MY PROFILE</h1></div>
   <div class="profileInfo">
-    <h3>ACCOUNT INFO</h3>
+    <center><h1>ACCOUNT INFO</h1></center>
     <button type="button" class="btn btn-primary btn-lg btn-block" style="border-radius:5px; background-color:#0D2E60; color: #999D99; border:0.5px solid #B41724" data-toggle="modal" data-target="#editAccount">EDIT ACCOUNT INFO</button>
-    <address>
-    <h5><strong>{{profile.first}} {{profile.last}}</strong><br>
-    {{profile.address1}}<br>
-    {{profile.address2}}<br>
+    <h3>{{profile.first}} {{profile.last}}<br>
+    {{profile.address1}}
+    {{profile.address2}}
     {{profile.city}}, {{profile.state}} {{profile.zip}}<br>
     {{profile.country}}<br>
-    <abbr title="Phone" style="color: gold;">Phone:</abbr> {{profile.userPhone}}</h5>
-    <h5>CAR:</h5>
-    {{profile.userCar}}<br>
-    <h5>FASTEST TIME</h5><br>
-    {{profile.laptime}}
-    <h3> V.I.P STATUS </h3>
-    {{profile.isVIP}}
-  </address>
-
-    <address>
-    <h5><a href="mailto:#">{{user.email}}</a></h5>
-  </address>
-  </div>
-  <div class="profileEvents">
-    <h3>YOUR UPCOMMING EVENTS</h3>
-    <button type="button" class="btn btn-primary btn-lg btn-block" style="border-radius:5px; background-color:#B41724; color: #999D99; border: 0.5px solid #0D2E60;" data-toggle="modal" data-target="#editAccount">EDIT YOUR EVENTS</button>
+    <h3>CAR: {{profile.userCar}}</h3>
+    <br>
+    <h3>FASTEST TIME: {{profile.laptime}}</h3>
+    <center>
+    <h1> V.I.P STATUS: {{profile.isVIP}} </h1>
+    <h2><a href="mailto:#">{{user.email}}</a></h2>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg"style="background-color: #B41724;border: 2px solid #0D2E60"ng-click="logout(user)">LOGOUT</button>
+  </center>
   </div>
 </div>
 
@@ -63,7 +57,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="accountPhone">PHONE #</label>
             <div class="col-md-4">
-              <input type="tel" class="form-control" placeholder="" id="accountPhone" style="border: 1px solid #B41724;background-color: #d9d9d9" ng-model="editProfile.phone" />
+              <input type="number" class="form-control" id="accountPhone" style="border: 1px solid #B41724;background-color: #d9d9d9" ng-model="editProfile.phone" />
             </div>
           </div>
           <!-- EMAIL-->

@@ -1,89 +1,39 @@
 <nav>
   <ul class="nav nav-tabs" style="background-color: #222222;">
-    <li role="presentation"><a ui-sref="eventsIntro" style="color:#999D99">INTRODUCTION</a></li>
+    <li role="presentation"><a ui-sref="eventsIntro" style="color:#999D99">OVERVIEW</a></li>
     <li role="presentation" class="active"><a ui-sref="events" style="background-color:#0D2E60;color:#999D99">UPCOMING EVENTS</a></li>
     <li role="presentation"><a ui-sref="calendar" style="color:#999D99">CALENDAR</a></li>
   </ul>
 </nav>
 <div class="outerEvents">
-  <div class="events">
-    <div class "eventTypes">
-      <img src="/images/newEducation.jpg" width="750" height="400" alt="" />
-      <img src="/images/newMeetUp.jpg" width="750" height="400" alt="" />
-      <img src="/images/newTournament.jpg" width="750" height="400" alt="" />
-      <img src="/images/newTrackDay.jpg" width="750" height="400" alt="" />
+  <div class="scrollPhoto">
+  <div class="infoBanner">
+    <h1>UPCOMING EVENTS</h1>
+    </div>
+    <div class="photobanner">
+     <img class="first"src = "/images/scroll1.jpg" alt="" />
+     <img src = "/images/scroll2.jpg" alt="" />
+     <img src = "/images/scroll3.jpg" alt="" />
+     <img src = "/images/scroll4.jpg" alt="" />
+     <img src = "/images/scroll5.jpg" alt="" />
+     <img src = "/images/scroll6.jpg" alt="" />
+     <img src = "/images/scroll7.jpg" alt="" />
+     <img src = "/images/scroll8.jpg" alt="" />
+     <img src = "/images/scroll9.jpg" alt="" />
+     <img src = "/images/scroll10.jpg" alt="" />
+     <img src = "/images/scroll11.jpg" alt="" />
     </div>
   </div>
   <div class="media eventContainer" ng-repeat="event in events">
     <a class="media-left" ui-sref="calendar">
-      <img class="media-object" ng-src="{{event.img}}">
+      <img class="media-object" ng-src="{{event.img}}"style="margin-bottom: 30px">
     </a>
-    <div class="media-body eventList">
+    <div class="media-body eventList" style="width 400px;">
       <h2 class="media-heading">{{event.title}}</h2>
       <h4>Host: {{event.userName}}</h4>
       <br>
       <h4>Date: {{event.start}}</h4>
-
-      <h3>Rentals:</h3> <br>
-        <h4>Bikes:{{event.rentedBikeQty}} {{event.rentedBike}}</h4>
-        <h4>Cars:{{event.rentedCarQty}} {{event.rentedCar}}</h4>
-      <br>
       <h4>Group Size: {{event.group}} People</h4>
     </div>
-  </div>
-
-
-
-
-
-  <div class="planner">
-    <h3> GROUP INFO: </h3>
-    <form>
-      EVENT NAme:
-      <div class="eventName">
-        <input type="text" placeholder="Event Name" ng-model="event.title">
-        <br>
-      </div>
-      ENTER EVENT IMAGE:(optional):
-      <input type="text" ng-src="event.img" ng-model="event.img" placeholder="img url (optional)">
-      <br> TRACK DAY DATE:
-      <div class="datePicker">
-        <input type="String" name="trackDay" ng-model='event.start'>
-      </div>
-      EVENT TYPE:
-      <br/>
-      <!-- <div class="eventType">
-        <select>
-          <option value="true" ng-model="event.trackDay">Track Day</option>
-          <option value="true" ng-model="event.education">Education</option>
-          <option value="true" ng-model="event.meetUp">Meet Up</option>
-          <option value="true" ng-model="event.tournament">Tournament</option>
-
-
-        </select>
-      </div> -->
-      <br>
-      <div class="group">
-        <input type="number" name="quantity" placeholder="Group Size" min="1" ng-model="event.group">
-      </div>
-      <h3>EQUIPMENT NEEDED(OPTIONAL):</h3>
-      <!-- <br> CAR RENT:
-
-      <div class="carPicker">
-        <select ng-options="car as car.car for car in cars track by car._id"ng-model="event.car">
-
-
-        </select>
-      </div>
-      <br> BIKE RENT:
-      <div class="bikePicker">
-        <select ng-options="bike as bike.bike for bike in bikes track by bike._id"ng-model="event.bike">
-
-
-
-        </select> -->
-      </div>
-      <button ng-click="addEvent(event)">ADD EVENT</button>
-    </form>
   </div>
 </div>

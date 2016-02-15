@@ -8,6 +8,7 @@
 .fc {
 	direction: ltr;
 	text-align: left;
+	height: 80%;
 }
 
 .fc-rtl {
@@ -524,7 +525,7 @@ temporary rendered events).
 	color: #999D99;
 	text-decoration: none;
 	background-color: #B41724
-	
+
 }
 
 .fc-event[href],

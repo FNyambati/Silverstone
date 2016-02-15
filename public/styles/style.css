@@ -1,3 +1,6 @@
+* {
+  font-family: 'Days One', sans-serif;
+}
 html {
   margin: 0 auto;
   box-sizing: border-box;
@@ -5,11 +8,9 @@ html {
 body {
   margin: 0;
 }
-
-/*main {
-    min-height: 100vh;
-    background-color: #222222;
-  }*/
+nav li {
+  font-size: 18px;
+}
 
 #video-background {
   /*//////////  making the video fullscreen \\\\\\\\\\\\\\\ */
@@ -228,16 +229,25 @@ body {
   height: 100%;
   background-color: #222222;
   color: #999D99;
+  font-size: 40px;
+
 }
 .directions h2 {
   color: #999D99;
+  font-size: 35px;
 }
 .steps ol {
-  border: 1px solid #B41724;
+  border: 4px solid #B41724;
+}
+.intro span{
+  border: 4px solid #B41724;
+  font-size: 18px;
 }
 .directions li {
   color: #999D99;
   text-align: left;
+  padding: 9px;
+  font-size: 18px;
 }
 .steps {
   float: left;
@@ -250,7 +260,7 @@ body {
   color: #999D99;
   text-align: left;
   display: block;
-  border: 1px solid #B41724;
+  border: 4px solid #B41724;
   padding: 15px;
 }
 
@@ -327,6 +337,77 @@ td {
 }
 
 /*//////////////////////CONTACT///////////////////////////////////////*/
+#ContactUs {
+    font-size: 5em;
+    margin-left: 10%;
+    margin-bottom: 2%;
+    color: #275499;
+  }
+#contactInputDiv {
+    margin: 0% 0 0 20%;
+    margin-bottom: 50px;
+    height: 60%;
+    width: 60%;
+    display: inline-block;
+    border: 5px solid #275499border: 5px solid #275499
+}
+
+.contactInput {
+    width: 100%;
+    margin-bottom: 2%;
+    height: 30%;
+    font-size: 16px;
+    padding: 1% 1% 1% 3%;
+    color: #222222;
+    background-color: rgba( 255, 255, 255, .8);
+    outline: none;
+    border: none;
+    border-radius: 7px;
+}
+
+#submitButton {
+    background-color:#275499;
+    color: rgba(2, 2, 2, .5);
+    padding: 1% 0.7%;
+    text-align: center;
+    font-size: 16px;
+    transition: all .25s ease;
+    height: 10%;
+    border-radius: 7px;
+    transition: all .5s ease;
+    width: 25%;
+}
+#floatingInfo {
+    display: inline-block;
+    vertical-align: top;
+    height: 54%;
+    width: 40%;
+    position: relative;
+}
+.raceTrackInfo {
+    line-height: 1.5em;
+    font-size:28px;
+    background-color: rgba(34, 34, 34, 0.8);
+    padding: 5%;
+    color: #999D99;
+    position: absolute;
+    left: 25%;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+    border-radius: 2px;
+    border: 5px solid #275499;
+}
+
+#submitButton:hover {
+    cursor: pointer;
+    color: rgba(93, 21, 21, 1);
+}
+#contactBody {
+    color: white;
+    padding-top: 5%;
+}
+
 
 .contact {
   width: 100vw;
@@ -334,12 +415,12 @@ td {
   background-color: #222222;
 }
 .contactContainer{
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 }
 .contact h1 {
   margin: 0 auto;
-
+  font-size: 4.5em;
   color: #999D99;
   text-align: center;
 }
@@ -368,6 +449,9 @@ background: #222222;
 .infoBanner {
   width: 800px;
 	margin: 40px auto;
+  color: #999D99;
+  font-size: 18px;
+  text-align: center;
 }
 .photobanner {
 	height: 233px;
@@ -459,7 +543,18 @@ background: #222222;
  box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 }
 /*///////////////////////////HISTORY/////////////////////////////////*/
+.history p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 
+}
+.historyIntro p {
+  max-width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  padding-right: 10px;
+
+}
 .history {
   width: 100%;
   height: 100%;
@@ -476,6 +571,7 @@ background: #222222;
   color: #999D99;
   text-align: center;
   margin: 0;
+  padding: 10px
 }
 .history p {
   color: #999D99;
@@ -515,6 +611,10 @@ background: #222222;
 }
 .timeline {
   min-height: 600px;
+
+}
+.timeline h1 {
+  text-align: center;
 }
 marquee {
   height: 600px;
@@ -547,28 +647,44 @@ marquee {
   background-color: #222222;
   color: #999D99;
   border: 1px solid black;
+  padding: 50px;
+  width:100%;
 }
 .rules h1 {
   margin: 0;
+  padding-bottom: 10px;
 }
 .rules ul {
   margin: 0;
 }
 .drivers {
   border: 1px solid black;
+  padding: 25px;
+  margin: 15px;
+  width: 70%;
 }
 .spectators {
   border: 1px solid black;
+  padding: 25px;
+  margin:30px;
+  width: 70%;
 }
 
 /*///////////////////////////FAQ///////////////////////////////////////////*/
-
+.outerFaq {
+  width: 100vw;
+  background-color: #222222;
+  height: 100vh;
+  margin: 0 auto;
+}
 .faq {
   background-color: #222222;
   color: #999D99;
   margin: 0 auto;
   padding: 0 auto;
   height: 100vh;
+  width: 60%;
+
 }
 .faq h3 {
   margin: 0 auto;
@@ -577,10 +693,14 @@ marquee {
 }
 .faq h1 {
   margin: 0;
+  padding-top: 50px;
   text-align: center;
+  padding-bottom: 180px;
 }
 .faq .answer {
-  border: 1px solid #0D2E60;
+  border: 3px solid #0D2E60;
+  font-size: 24px;
+  padding:20px;
 }
 
 /*///////////////////EVENTS ROUTE /////////////////////*/
@@ -590,6 +710,13 @@ marquee {
   height: 100%;
   width: 100%;
 }
+.eventsIntro h1 {
+  margin-top: 0;
+  color: #999D99;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
 
 ul.img-list {
   list-style-type: none;
@@ -650,6 +777,13 @@ ul.img-list li:hover span.text-content {
 
 .eventList {
 color: #999D99;
+padding: 20px;
+height: 250px;
+width: 400px
+margin: 50px;
+}
+.eventList img {
+  margin: 10px
 }
 .eventContainer {
   padding-left: 40px;
@@ -677,9 +811,10 @@ color: #999D99;
 
 .planner {
   background-color: #222222;
-  height: 100vh;
-  width: 100vw;
+  width: 80%;
   color: #999D99;
+  border: 1px solid white;
+  padding: 300px;
 }
 
 /*//////////////EXPERIENCES/////////////////////////////*/
@@ -827,11 +962,10 @@ input[type=radio] {
   text-align: center;
 }
 .profileInfo {
-  border: 2px solid green;
-  width: 35%;
-  height: 85%;
-  float: left;
-  padding: 25px;
+  border: 7px solid #0D2E60;
+  width: 100%;
+  height: 96%;
+  font-size: 20px;
 }
 
 .profileEvents {

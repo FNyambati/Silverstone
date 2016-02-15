@@ -1,40 +1,103 @@
 <nav>
   <ul class="nav nav-tabs" style="background-color: #222222;">
-    <li role="presentation" class="active"><a ui-sref="eventsIntro" style="background-color:#0D2E60;color:#999D99">INTRODUCTION</a></li>
+    <li role="presentation" class="active"><a ui-sref="eventsIntro" style="background-color:#0D2E60;color:#999D99">OVERVIEW</a></li>
     <li role="presentation"><a ui-sref="events" style="color:#999D99">UPCOMING EVENTS</a></li>
     <li role="presentation"><a ui-sref="calendar" style="color:#999D99">CALENDAR</a></li>
   </ul>
 </nav>
 <div class="eventsIntro">
+  <h1>EVENT TYPES</h1>
+  <center>
+    <button class="btn btn-primary btn-lg planButton" data-toggle="modal" data-target="#eventPlanner"style="border-radius:5px; background-color:#0D2E60; color: #999D99; border:0.5px solid #B41724; padding:25px; margin:13px">
+      Plan Your Event
+    </button>
+  </center>
   <div class="events">
     <ul class="img-list">
       <li>
-        <a href="http://nataliemac.com">
+        <a ui-sref="events">
           <img src="/images/newEducation.jpg" width="750" height="400" alt="" />
           <span class="text-content"><span>Place Name</span></span>
         </a>
       </li>
       <li>
-        <a href="http://nataliemac.com">
+        <a ui-sref="events">
           <img src="/images/newMeetUp.jpg" width="750" height="400" alt="" />
           <span class="text-content"><span>Place Name</span></span>
         </a>
       </li>
       <li>
-        <a href="http://nataliemac.com">
+        <a ui-sref="events">
           <img src="/images/newTournament.jpg" width="750" height="400" alt="" />
           <span class="text-content"><span>Place Name</span></span>
         </a>
       </li>
       <li>
-        <a href="http://nataliemac.com">
+        <a ui-sref="events">
           <img src="/images/newTrackDay.jpg" width="750" height="400" alt="" />
           <span class="text-content"><span>Place Name</span></span>
         </a>
       </li>
     </ul>
-    <center>
-    <button class='planButton'>PLAN YOUR EVENT NOW</button>
-  </center>
   </div>
+  <center>
+    <button class="btn btn-primary btn-lg planButton" data-toggle="modal" data-target="#eventPlanner"style="border-radius:5px; background-color:#0D2E60; color: #999D99; border:0.5px solid #B41724; padding:25px; margin:13px">
+      Plan Your Event
+    </button>
+  </center>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="eventPlanner" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header" style="background-color: #0D2E60;color: #999D99">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">NEW EVENT</h4>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body" style="background-color: #222222; color:#B41724;">
+
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="laptime">EVENT NAME</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="eventTitle" placeholder="Event Name" style="border: 1px solid #B41724;background-color: #d9d9d9" ng-model="event.title" />
+            </div>
+            <label class="col-sm-1 control-label" for="eventImg"> IMG</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" id="eventImg" placeholder="url(optional)" style="border: 1px solid #B41724;background-color: #d9d9d9" ng-model="event.img" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="eventDate">EVENT DATE</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="eventDate" placeholder="MM-DD-YYYY" style="border: 1px solid #B41724;background-color: #d9d9d9" ng-model="event.start" />
+            </div>
+            <label class="col-sm-1 control-label" for="eventGroup"> SIZE</label>
+            <div class="col-sm-3">
+              <input type="number" class="form-control" id="eventGroup" placeholder="# of Guests" style="border: 1px solid #B41724;background-color: #d9d9d9" ng-model="event.group" />
+            </div>
+        </form>
+
+
+
+
+
+
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer" style="background-color:#0D2E60;color:#999D99">
+          <button type="button" class="btn btn-primary" style="background-color:#B41724;color:#d9d9d9;border:0.8px solid #d9d9d9" ng-click="addEvent(event)">
+            SUBMIT EVENT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

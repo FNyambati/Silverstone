@@ -9,11 +9,11 @@ angular.module('myApp', ['ui.router'])
       url: '/home',
       templateUrl: "/views/home.html"
     })
-    .state('info', {
-      url: '/info',
-      templateUrl: "/views/info.html"
-      // controller: "infoCtrl"
-    })
+    // .state('info', {
+    //   url: '/info',
+    //   templateUrl: "/views/info.html"
+    //   // controller: "infoCtrl"
+    // })
     .state('history', {
       url: '/history',
       templateUrl: "/views/history.html",
@@ -70,7 +70,18 @@ angular.module('myApp', ['ui.router'])
     .state('eventsIntro', {
       url: '/eventsIntro',
       templateUrl: "/views/eventsIntro.html",
-      controller: 'eventsIntroCtrl'
+      controller: 'eventsIntroCtrl',
+      resolve: {
+        user: function(userService, $state) {
+          return userService.getCurrentUser().then(function(response){
+            if(response.status !== 200){
+              $state.go('login');
+            }
+            return response.data;
+          });
+        }
+
+      }
     })
     .state('hof', {
       url: '/hof',
@@ -113,17 +124,17 @@ angular.module('myApp', ['ui.router'])
       url:'/events',
       templateUrl:'/views/events.html',
       controller: 'eventCtrl',
-      resolve: {
-        user: function(userService, $state) {
-          return userService.getCurrentUser().then(function(response){
-            if(response.status !== 200){
-              $state.go('login');
-            }
-            return response.data;
-          });
-        }
-
-      }
+      // resolve: {
+      //   user: function(userService, $state) {
+      //     return userService.getCurrentUser().then(function(response){
+      //       if(response.status !== 200){
+      //         $state.go('login');
+      //       }
+      //       return response.data;
+      //     });
+      //   }
+      //
+      // }
     })
     .state('calendar', {
       url:'/calendar',
