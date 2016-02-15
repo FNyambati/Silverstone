@@ -7,26 +7,26 @@
 </nav>
 <div class="outerEvents">
   <div class="scrollPhoto">
-  <div class="infoBanner">
-    <h1>UPCOMING EVENTS</h1>
+    <div class="infoBanner">
+      <h1>UPCOMING EVENTS</h1>
     </div>
     <div class="photobanner">
-     <img class="first"src = "/images/scroll1.jpg" alt="" />
-     <img src = "/images/scroll2.jpg" alt="" />
-     <img src = "/images/scroll3.jpg" alt="" />
-     <img src = "/images/scroll4.jpg" alt="" />
-     <img src = "/images/scroll5.jpg" alt="" />
-     <img src = "/images/scroll6.jpg" alt="" />
-     <img src = "/images/scroll7.jpg" alt="" />
-     <img src = "/images/scroll8.jpg" alt="" />
-     <img src = "/images/scroll9.jpg" alt="" />
-     <img src = "/images/scroll10.jpg" alt="" />
-     <img src = "/images/scroll11.jpg" alt="" />
+      <img class="first" src="/images/scroll1.jpg" alt="" />
+      <img src="/images/scroll2.jpg" alt="" />
+      <img src="/images/scroll3.jpg" alt="" />
+      <img src="/images/scroll4.jpg" alt="" />
+      <img src="/images/scroll5.jpg" alt="" />
+      <img src="/images/scroll6.jpg" alt="" />
+      <img src="/images/scroll7.jpg" alt="" />
+      <img src="/images/scroll8.jpg" alt="" />
+      <img src="/images/scroll9.jpg" alt="" />
+      <img src="/images/scroll10.jpg" alt="" />
+      <img src="/images/scroll11.jpg" alt="" />
     </div>
   </div>
   <div class="media eventContainer" ng-repeat="event in events">
     <a class="media-left" ui-sref="calendar">
-      <img class="media-object" ng-src="{{event.img}}"style="margin-bottom: 30px">
+      <img class="media-object" ng-src="{{event.img}}" style="margin-bottom: 30px">
     </a>
     <div class="media-body eventList" style="width 400px;">
       <h2 class="media-heading">{{event.title}}</h2>

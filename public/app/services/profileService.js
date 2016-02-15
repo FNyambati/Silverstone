@@ -17,7 +17,7 @@ angular.module("myApp").service("profileService", function($http) {
     });
   };
   this.editProfile = function(user, editProfile) {
-    console.log('service',user);
+    console.log('service', user);
     return $http({
       method: 'PUT',
       url: '/profile/' + editProfile._id,

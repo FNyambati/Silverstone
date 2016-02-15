@@ -53,7 +53,7 @@ angular.module('myApp').controller('profileCtrl', function($scope, $state, profi
 
   // $scope.logout= userService.logout;
   $scope.logout = function(user) {
-    userService.logout($scope.user).then(function(res){
+    userService.logout($scope.user).then(function(res) {
       swal({
         title: " Succesfully Logged Out!",
         text: "Thanks For Visiting",

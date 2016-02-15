@@ -11,11 +11,11 @@ var Profile = new mongoose.Schema({
   last: {
     type: String,
   },
-    phone: {
+  phone: {
     type: Number
   },
 
-    address1: {
+  address1: {
     type: String,
   },
   address2: {

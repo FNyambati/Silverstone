@@ -1,6 +1,6 @@
-angular.module('myApp').controller('faqCtrl', function($scope){
+angular.module('myApp').controller('faqCtrl', function($scope) {
   $(function() {
-    $( "#accordion" ).accordion({
+    $("#accordion").accordion({
       collapsible: true
     });
   });

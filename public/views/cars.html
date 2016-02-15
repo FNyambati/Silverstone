@@ -5,12 +5,13 @@
     <li role="presentation"><a ui-sref="bikes" style="color:#999D99">BIKE RENTAL</a></li>
   </ul>
 </nav>
-<div class="rent"><h1>CARS AVAILABLE FOR RENT</h1></div>
+<div class="rent">
+  <h1>CARS AVAILABLE FOR RENT</h1></div>
 <div class="outerRent">
-<div class="image" ng-repeat="car in cars">
+  <div class="image" ng-repeat="car in cars">
 
-  <img ng-src="{{car.img}}">
-              <h2>
+    <img ng-src="{{car.img}}">
+    <h2>
                 <span>{{car.car}}</span>
                 <br> <span>Horsepower: {{car.horsepower}} HP</span>
                 <br> <span>0-60: {{car.sixty}} seconds</span>
@@ -19,6 +20,6 @@
                 <br><span>{{car.description}}</span>
                 <br> <span>Price: £{{car.price}}/per day</span>
               </h2>
-            </div>
+  </div>
 
 </div>

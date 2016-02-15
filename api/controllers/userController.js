@@ -4,7 +4,7 @@ module.exports = {
 
   register: function(req, res, next) {
     User.create(req.body, function(err, result) {
-      if(err) return res.status(500).send(err);
+      if (err) return res.status(500).send(err);
       newUser = result.toObject();
       newUser.password = null;
       res.status(200).json(newUser);

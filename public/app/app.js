@@ -4,7 +4,7 @@ angular.module('myApp', ['ui.router'])
   $urlRouterProvider.otherwise('/home');
 
   $stateProvider
-/////////////NAVBAR ROUTES//////////////////
+  /////////////NAVBAR ROUTES//////////////////
     .state('home', {
       url: '/home',
       templateUrl: "/views/home.html"
@@ -48,18 +48,18 @@ angular.module('myApp', ['ui.router'])
       templateUrl: "/views/directions.html"
     })
     .state('login', {
-      url:'/login',
-      templateUrl:'/views/login.html',
+      url: '/login',
+      templateUrl: '/views/login.html',
       controller: 'userCtrl'
     })
     .state('profile', {
-      url:'/myProfile',
+      url: '/myProfile',
       templateUrl: '/views/profile.html',
       controller: 'profileCtrl',
       resolve: {
         user: function(userService, $state) {
-          return userService.getCurrentUser().then(function(response){
-            if(response.status !== 200){
+          return userService.getCurrentUser().then(function(response) {
+            if (response.status !== 200) {
               $state.go('login');
             }
             return response.data;
@@ -74,8 +74,8 @@ angular.module('myApp', ['ui.router'])
       controller: 'eventsIntroCtrl',
       resolve: {
         user: function(userService, $state) {
-          return userService.getCurrentUser().then(function(response){
-            if(response.status !== 200){
+          return userService.getCurrentUser().then(function(response) {
+            if (response.status !== 200) {
               $state.go('login');
             }
             return response.data;
@@ -86,44 +86,44 @@ angular.module('myApp', ['ui.router'])
     })
     .state('hof', {
       url: '/hof',
-      templateUrl:'views/hof.html',
+      templateUrl: 'views/hof.html',
       controller: "laptimeCtrl"
     })
     //////////////////ROUTES FOR INFO PAGE///////////////////////
     .state('circut', {
-      url:'/circut',
-      templateUrl:'/views/circut.html'
+      url: '/circut',
+      templateUrl: '/views/circut.html'
     })
     .state('rules', {
-      url:'/rules',
-      templateUrl:'/views/rules.html'
+      url: '/rules',
+      templateUrl: '/views/rules.html'
     })
     /////////////ROUTES FOR EXPERIENCE PAGE /////////////////////
     .state('vip', {
-      url:'/vip',
-      templateUrl:'/views/vip.html',
+      url: '/vip',
+      templateUrl: '/views/vip.html',
       controller: 'vipCtrl',
       resolve: {
         profile: function(userService, profileService, $state) {
-        return profileService.getProfileInfo();
+          return profileService.getProfileInfo();
         }
       }
 
     })
     .state('cars', {
-      url:'/cars',
-      templateUrl:'/views/cars.html',
+      url: '/cars',
+      templateUrl: '/views/cars.html',
       controller: 'carCtrl'
     })
     .state('bikes', {
-      url:'/bikes',
-      templateUrl:'/views/bikes.html',
+      url: '/bikes',
+      templateUrl: '/views/bikes.html',
       controller: 'bikeCtrl'
     })
     ///////////////////ROUTES FOR EVENTS PAGE//////////////////////////
     .state('events', {
-      url:'/events',
-      templateUrl:'/views/events.html',
+      url: '/events',
+      templateUrl: '/views/events.html',
       controller: 'eventCtrl',
       // resolve: {
       //   user: function(userService, $state) {
@@ -138,33 +138,33 @@ angular.module('myApp', ['ui.router'])
       // }
     })
     .state('calendar', {
-      url:'/calendar',
-      templateUrl:'/views/calendar.html',
+      url: '/calendar',
+      templateUrl: '/views/calendar.html',
       controller: 'calendarCtrl'
     })
     ///////////OPTIONAL ROUTES FOR RESULTS PAGE IF AMPLE TIME ////////////////////////////
     .state('sportscars', {
-      url:'/sportscars',
-      templateUrl:'/views/sportscars.html'
+      url: '/sportscars',
+      templateUrl: '/views/sportscars.html'
     })
     .state('gt', {
-      url:'/gt',
-      templateUrl:'/views/gt.html'
+      url: '/gt',
+      templateUrl: '/views/gt.html'
     });
 })
 
 .directive('navbarDir', function() {
-  return {
-    templateUrl: '/views/navBar.html'
-  };
-})
-.directive('footerDir', function() {
-  return {
-    templateUrl: '/views/footer.html'
-  };
-})
-.directive('profileForm', function() {
-  return {
-    templateUrl: '/views/profileForm.html'
-  };
-});
+    return {
+      templateUrl: '/views/navBar.html'
+    };
+  })
+  .directive('footerDir', function() {
+    return {
+      templateUrl: '/views/footer.html'
+    };
+  })
+  .directive('profileForm', function() {
+    return {
+      templateUrl: '/views/profileForm.html'
+    };
+  });

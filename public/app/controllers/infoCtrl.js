@@ -1,3 +1,3 @@
-angular.module('myApp').controller('infoCtrl', function($scope){
+angular.module('myApp').controller('infoCtrl', function($scope) {
 
 });

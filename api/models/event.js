@@ -16,7 +16,7 @@ var eventSchema = Schema({
   host: {
     type: String
   },
-  // rentedCar: {
+  // rentedCar: {   FIX THESE LATER!!!
   //   type: String
   // },
   // rentedBike: {

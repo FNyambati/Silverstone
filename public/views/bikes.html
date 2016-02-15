@@ -1,16 +1,17 @@
 <nav>
-<ul class="nav nav-tabs" style="background-color: #222222;">
-  <li role="presentation"><a ui-sref="vip"style="color:gold">V.I.P</a></li>
-  <li role="presentation"><a ui-sref="cars"style="color:#999D99">CAR RENTAL</a></li>
-  <li role="presentation"class="active"><a ui-sref="bikes"style="background-color:#0D2E60;color:#999D99">BIKE RENTAL</a></li>
-</ul>
+  <ul class="nav nav-tabs" style="background-color: #222222;">
+    <li role="presentation"><a ui-sref="vip" style="color:gold">V.I.P</a></li>
+    <li role="presentation"><a ui-sref="cars" style="color:#999D99">CAR RENTAL</a></li>
+    <li role="presentation" class="active"><a ui-sref="bikes" style="background-color:#0D2E60;color:#999D99">BIKE RENTAL</a></li>
+  </ul>
 </nav>
-    <div class="rent"><h1>BIKES AVAILABLE FOR RENT</h1></div>
-    <div class="outerRent">
-    <div class="image" ng-repeat="bike in bikes">
+<div class="rent">
+  <h1>BIKES AVAILABLE FOR RENT</h1></div>
+<div class="outerRent">
+  <div class="image" ng-repeat="bike in bikes">
 
-      <img ng-src="{{bike.img}}">
-                  <h2>
+    <img ng-src="{{bike.img}}">
+    <h2>
                     <span>{{bike.bike}}</span>
                     <span><br> CC: {{bike.cc}}</span>
                     <span><br> 0-60: {{bike.sixty}} seconds</span>
@@ -19,5 +20,5 @@
                     <span><br>{{bike.description}}</span>
                     <span><br> Price: £{{bike.price}}/per day</span>
                   </h2>
-                </div>
-    </div>
+  </div>
+</div>

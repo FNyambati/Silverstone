@@ -2,9 +2,10 @@
   <div class="profileBanner">
     <h1>MY PROFILE</h1></div>
   <div class="profileInfo">
-    <center><h1>ACCOUNT INFO</h1></center>
+    <center>
+      <h1>ACCOUNT INFO</h1></center>
     <button type="button" class="btn btn-primary btn-lg btn-block" style="border-radius:5px; background-color:#0D2E60; color: #999D99; border:0.5px solid #B41724" data-toggle="modal" data-target="#editAccount">EDIT ACCOUNT INFO</button>
-    <h3>{{profile.first}} {{profile.last}}<br>
+    <h3>{{profile.first}} {{profile.last}} PHONE:<br>
     {{profile.address1}}
     {{profile.address2}}
     {{profile.city}}, {{profile.state}} {{profile.zip}}<br>
@@ -13,12 +14,12 @@
     <br>
     <h3>FASTEST TIME: {{profile.laptime}}</h3>
     <center>
-    <h1> V.I.P STATUS: {{profile.isVIP}} </h1>
-    <h2><a href="mailto:#">{{user.email}}</a></h2>
-    <br>
-    <br>
-    <button type="button" class="btn btn-primary btn-lg"style="background-color: #B41724;border: 2px solid #0D2E60"ng-click="logout(user)">LOGOUT</button>
-  </center>
+      <h1> V.I.P STATUS: {{profile.isVIP}} </h1>
+      <h2><a href="mailto:#">{{user.email}}</a></h2>
+      <br>
+      <br>
+      <button type="button" class="btn btn-primary btn-lg" style="background-color: #B41724;border: 2px solid #0D2E60" ng-click="logout(user)">LOGOUT</button>
+    </center>
   </div>
 </div>
 

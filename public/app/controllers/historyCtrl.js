@@ -1,6 +1,6 @@
-angular.module('myApp').controller('historyCtrl', function($scope){
+angular.module('myApp').controller('historyCtrl', function($scope) {
   $(function() {
-    $( "#accordion" ).accordion({
+    $("#accordion").accordion({
       collapsible: true
     });
   });

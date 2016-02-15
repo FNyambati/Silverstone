@@ -99,11 +99,11 @@ app.get('/profile', profileCtrl.read);
 app.put('/profile/:id', profileCtrl.update);
 
 //////////EVENT INFO /////////////////
-app.get('/events', eventCtrl.read);  //DONT FORGET TO USE THE 'S' AT THE END OF ENDPOINT
+app.get('/events', eventCtrl.read); //DONT FORGET TO USE THE 'S' AT THE END OF ENDPOINT
 app.post('/event', eventCtrl.create);
 app.get('/events', eventCtrl.read);
 app.get('event/:id', eventCtrl.readUserEvent);
-app.delete('/event/:id',eventCtrl.delete);
+app.delete('/event/:id', eventCtrl.delete);
 
 
 

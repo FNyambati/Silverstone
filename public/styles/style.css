@@ -11,7 +11,6 @@ body {
 nav li {
   font-size: 14px;
 }
-
 #video-background {
   /*//////////  making the video fullscreen \\\\\\\\\\\\\\\ */
   position: fixed;
@@ -230,7 +229,6 @@ nav li {
   background-color: #222222;
   color: #999D99;
   font-size: 40px;
-
 }
 .directions h2 {
   color: #999D99;
@@ -239,7 +237,7 @@ nav li {
 .steps ol {
   border: 4px solid #B41724;
 }
-.intro span{
+.intro span {
   border: 4px solid #B41724;
   font-size: 18px;
 }
@@ -314,7 +312,6 @@ td {
   font: sans-serif;
   text-align: center;
   font-size: 18px;
-
 }
 .results img {
   max-height: 14px;
@@ -337,87 +334,83 @@ td {
 }
 
 /*//////////////////////CONTACT///////////////////////////////////////*/
-#ContactUs {
-    font-size: 5em;
-    margin-left: 10%;
-    margin-bottom: 2%;
-    color: #275499;
-  }
-#contactInputDiv {
-    margin: 0% 0 0 20%;
-    margin-bottom: 50px;
-    height: 60%;
-    width: 60%;
-    display: inline-block;
-    border: 5px solid #275499border: 5px solid #275499
-}
 
+#ContactUs {
+  font-size: 5em;
+  margin-left: 10%;
+  margin-bottom: 2%;
+  color: #275499;
+}
+#contactInputDiv {
+  margin: 0% 0 0 20%;
+  margin-bottom: 50px;
+  height: 60%;
+  width: 60%;
+  display: inline-block;
+  border: 5px solid #275499border: 5px solid #275499
+}
 .contactInput {
-    width: 100%;
-    margin-bottom: 2%;
-    height: 30%;
-    font-size: 16px;
-    padding: 1% 1% 1% 3%;
-    color: #222222;
-    background-color: rgba( 255, 255, 255, .8);
-    outline: none;
-    border: none;
-    border-radius: 7px;
+  width: 100%;
+  margin-bottom: 2%;
+  height: 30%;
+  font-size: 16px;
+  padding: 1% 1% 1% 3%;
+  color: #222222;
+  background-color: rgba( 255, 255, 255, .8);
+  outline: none;
+  border: none;
+  border-radius: 7px;
 }
 textarea {
   height: 30%;
 }
-
 #submitButton {
-    background-color:#275499;
-    color: rgba(2, 2, 2, .5);
-    padding: 1% 0.7%;
-    text-align: center;
-    font-size: 16px;
-    transition: all .25s ease;
-    height: 10%;
-    border-radius: 7px;
-    transition: all .5s ease;
-    width: 25%;
+  background-color: #275499;
+  color: rgba(2, 2, 2, .5);
+  padding: 1% 0.7%;
+  text-align: center;
+  font-size: 16px;
+  transition: all .25s ease;
+  height: 10%;
+  border-radius: 7px;
+  transition: all .5s ease;
+  width: 25%;
 }
 #floatingInfo {
-    display: inline-block;
-    /*vertical-align: top;*/
-    height: 34%;
-    width: 40%;
-    position: relative;
+  display: inline-block;
+  /*vertical-align: top;*/
+  height: 34%;
+  width: 40%;
+  position: relative;
 }
 .raceTrackInfo {
-    line-height: 1.5em;
-    font-size:28px;
-    background-color: rgba(34, 34, 34, 0.8);
-    padding: 5%;
-    color: #999D99;
-    /*position: absolute;*/
-    left: 25%;
-    display: inline-block;
-    vertical-align: top;
-    box-shadow: 10px 10px 10px rgba(0,0,0,.5);
-    border-radius: 2px;
-    border: 5px solid #275499;
+  line-height: 1.5em;
+  font-size: 28px;
+  background-color: rgba(34, 34, 34, 0.8);
+  padding: 5%;
+  color: #999D99;
+  /*position: absolute;*/
+  left: 25%;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+  border-radius: 2px;
+  border: 5px solid #275499;
 }
-
 #submitButton:hover {
-    cursor: pointer;
-    color: rgba(93, 21, 21, 1);
+  cursor: pointer;
+  color: rgba(93, 21, 21, 1);
 }
 #contactBody {
-    color: white;
-    padding-top: 5%;
+  color: white;
+  padding-top: 5%;
 }
-
-
 .contact {
   width: 100%;
   height: 100%;
   background-color: #222222;
 }
-.contactContainer{
+.contactContainer {
   width: 100%;
   margin: 0 auto;
 }
@@ -430,8 +423,10 @@ textarea {
 .weather {
   margin: 0;
 }
+
 /*///////////////////////////INFO/////////////////////////////////*/
-.info{
+
+.info {
   background-color: #222222;
   width: 100vw;
   height: 100vh;
@@ -442,24 +437,24 @@ textarea {
   color: #999D99;
   margin: 0;
 }
-.scrollPhoto{
+.scrollPhoto {
   width: 1000px;
-overflow: hidden;
-margin: 50px auto;
-margin-top: 0px;
-background: #222222;
+  overflow: hidden;
+  margin: 50px auto;
+  margin-top: 0px;
+  background: #222222;
 }
 .infoBanner {
   width: 800px;
-	margin: 40px auto;
+  margin: 40px auto;
   color: #999D99;
   font-size: 18px;
   text-align: center;
 }
 .photobanner {
-	height: 233px;
-	width: 3550px;
-	margin-bottom: 50px;
+  height: 233px;
+  width: 3550px;
+  margin-bottom: 50px;
 }
 .photobanner img {
   max-width: 500px;
@@ -467,96 +462,84 @@ background: #222222;
 }
 
 /*keyframe animations*/
+
 .first {
- -webkit-animation: bannermove 30s linear infinite;
-    -moz-animation: bannermove 30s linear infinite;
-     -ms-animation: bannermove 30s linear infinite;
-      -o-animation: bannermove 30s linear infinite;
-         animation: bannermove 30s linear infinite;
+  -webkit-animation: bannermove 30s linear infinite;
+  -moz-animation: bannermove 30s linear infinite;
+  -ms-animation: bannermove 30s linear infinite;
+  -o-animation: bannermove 30s linear infinite;
+  animation: bannermove 30s linear infinite;
 }
-
 @keyframes "bannermove" {
- 0% {
+  0% {
     margin-left: 0px;
- }
- 100% {
+  }
+  100% {
     margin-left: -2125px;
- }
-
+  }
 }
-
 @-moz-keyframes bannermove {
- 0% {
-   margin-left: 0px;
- }
- 100% {
-   margin-left: -2125px;
- }
-
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
 }
-
 @-webkit-keyframes "bannermove" {
- 0% {
-   margin-left: 0px;
- }
- 100% {
-   margin-left: -2125px;
- }
-
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
 }
-
 @-ms-keyframes "bannermove" {
- 0% {
-   margin-left: 0px;
- }
- 100% {
-   margin-left: -2125px;
- }
-
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
 }
-
 @-o-keyframes "bannermove" {
- 0% {
-   margin-left: 0px;
- }
- 100% {
-   margin-left: -2125px;
- }
-
-
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
 }
 .photobanner img {
- -webkit-transition: all 0.5s ease;
- -moz-transition: all 0.5s ease;
- -o-transition: all 0.5s ease;
- -ms-transition: all 0.5s ease;
- transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-
 .photobanner img:hover {
- -webkit-transform: scale(1.1);
- -moz-transform: scale(1.1);
- -o-transform: scale(1.1);
- -ms-transform: scale(1.1);
- transform: scale(1.1);
- cursor: pointer;
-
- -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
- -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
- box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
+
 /*///////////////////////////HISTORY/////////////////////////////////*/
+
 .history p {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-
 }
 .historyIntro p {
   max-width: 60%;
   text-align: center;
   margin: 0 auto;
   padding-right: 10px;
-
 }
 .history {
   width: 100%;
@@ -597,7 +580,7 @@ background: #222222;
   flex-flow: row;
   width: 25%;
   float: right;
-  height:70%;
+  height: 70%;
   overflow: hidden;
 }
 .decade img {
@@ -614,7 +597,6 @@ background: #222222;
 }
 .timeline {
   min-height: 600px;
-
 }
 .timeline h1 {
   text-align: center;
@@ -651,7 +633,7 @@ marquee {
   color: #999D99;
   border: 1px solid black;
   padding: 50px;
-  width:100%;
+  width: 100%;
 }
 .rules h1 {
   margin: 0;
@@ -669,11 +651,12 @@ marquee {
 .spectators {
   border: 1px solid black;
   padding: 25px;
-  margin:30px;
+  margin: 30px;
   width: 70%;
 }
 
 /*///////////////////////////FAQ///////////////////////////////////////////*/
+
 .outerFaq {
   width: 100vw;
   background-color: #222222;
@@ -687,7 +670,6 @@ marquee {
   padding: 0 auto;
   height: 100vh;
   width: 60%;
-
 }
 .faq h3 {
   margin: 0 auto;
@@ -703,7 +685,7 @@ marquee {
 .faq .answer {
   border: 3px solid #0D2E60;
   font-size: 24px;
-  padding:20px;
+  padding: 20px;
 }
 
 /*///////////////////EVENTS ROUTE /////////////////////*/
@@ -719,22 +701,19 @@ marquee {
   text-align: center;
   padding-bottom: 15px;
 }
-
-
 ul.img-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-
 ul.img-list li {
   display: inline-block;
   margin: 0 1em 1em 0;
   position: relative;
 }
 span.text-content {
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   color: white;
   cursor: pointer;
   font-size: 20px;
@@ -746,16 +725,15 @@ span.text-content {
   width: 750px;
   opacity: 0;
   -webkit-transition: opacity 500ms;
- -moz-transition: opacity 500ms;
- -o-transition: opacity 500ms;
- transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
 }
 span.text-content span {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
-
 ul.img-list li:hover span.text-content {
   opacity: 1;
 }
@@ -772,19 +750,18 @@ ul.img-list li:hover span.text-content {
   text-decoration: none;
   margin: 0 1em 1em 0;
 }
-
 .planButton:hover {
   background: #0D2e60;
   text-decoration: none;
 }
+
 /*///////////////////EVENT LIST /////////////////////*/
 
 .eventList {
-color: #999D99;
-padding: 20px;
-height: 250px;
-width: 400px
-margin: 50px;
+  color: #999D99;
+  padding: 20px;
+  height: 250px;
+  width: 400px margin: 50px;
 }
 .eventList img {
   margin: 10px
@@ -792,15 +769,13 @@ margin: 50px;
 .eventContainer {
   padding-left: 40px;
 }
-
-
 .events img {
   padding: 15px 0px 20px 0px;
   position: relative;
 }
-.outerEvents{
-    width: 100%;
-    background-color: #222222
+.outerEvents {
+  width: 100%;
+  background-color: #222222
 }
 .events {
   background-color: #222222;
@@ -809,7 +784,6 @@ margin: 50px;
   margin: 0 auto;
   color: #999D99;
 }
-
 
 /*//////////////PLANNER/////////////////////////////*/
 
@@ -836,6 +810,7 @@ margin: 50px;
 .rowContainer {
   width: 100%
 }
+
 /*///////////////////////CARS/////////////////////////////*/
 
 .rent h1 {
@@ -886,7 +861,7 @@ margin: 50px;
   height: 100vh;
   width: 100vw;
 }
-.login h1{
+.login h1 {
   color: #999D99;
   margin: 0;
   text-align: center;
@@ -923,27 +898,29 @@ input[type=radio] {
 }
 .carPicker select {
   width: 240px;
-     height: 34px;
-     overflow: hidden;
-     background: url(new_arrow.png) no-repeat right #0D2E60;
-     border: 1px solid #ccc;
-
+  height: 34px;
+  overflow: hidden;
+  background: url(new_arrow.png) no-repeat right #0D2E60;
+  border: 1px solid #ccc;
 }
 .bikePicker select {
   width: 240px;
-     height: 34px;
-     overflow: hidden;
-     background: url(new_arrow.png) no-repeat right #0D2E60;
-     border: 1px solid #ccc;
-
+  height: 34px;
+  overflow: hidden;
+  background: url(new_arrow.png) no-repeat right #0D2E60;
+  border: 1px solid #ccc;
 }
+
 /*///////////////////F1 COUNTDOWN //////////////////////*/
+
 .f1 img {
   z-index: -1;
   width: 100vw;
   height: 100vh;
 }
+
 /*/////////////////////MY PROFILE //////////////////////*/
+
 .myProfile {
   padding: 11px;
   background-color: #222222;
@@ -971,7 +948,6 @@ input[type=radio] {
   height: 96%;
   font-size: 20px;
 }
-
 .profileEvents {
   border: 2px dotted red;
   width: 65%;
@@ -979,21 +955,13 @@ input[type=radio] {
   float: left;
   padding: 25px;
 }
-.legend{
+.legend {
   color: #999D99;
 }
 
-
-
-
-
-
-
-
-
-
 /* ///////////////// VIP /////////////////////////////*/
-.vipBanner{
+
+.vipBanner {
   color: #999D99;
   text-align: center;
   margin: 0px;

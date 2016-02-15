@@ -17,9 +17,9 @@ var carSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  topSpeed:  {
-  type: Number,
-  required: true
+  topSpeed: {
+    type: Number,
+    required: true
   },
   sixty: {
     type: String,

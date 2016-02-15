@@ -1,4 +1,4 @@
-angular.module('myApp').controller('contactCtrl', function($scope){
+angular.module('myApp').controller('contactCtrl', function($scope, $state){
     $scope.sendContact = function() {
       swal({
         title: "Your Enquiry has been sent!",
@@ -9,5 +9,6 @@ angular.module('myApp').controller('contactCtrl', function($scope){
         imageUrl: "http://www.circuitofwales.com/media/1328/2000px-logo_silverstone_circuitsvg.png",
         imageSize: "120x120"
       });
+      $state.go('home');
     };
 });

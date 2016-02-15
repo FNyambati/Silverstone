@@ -11,12 +11,13 @@ angular.module('myApp').controller('userCtrl', function($scope, userService, $st
         imageSize: "120x120"
       });
       console.log(res);
-      $('#signupbox').hide(); $('#loginbox').show();
+      $('#signupbox').hide();
+      $('#loginbox').show();
     });
   };
   $scope.login = function(user) {
-    userService.login($scope.user).then(function(res){
-      if(res.status === 401){
+    userService.login($scope.user).then(function(res) {
+      if (res.status === 401) {
         swal({
           title: "Email or Password Incorrect",
           text: "Please try Again",
