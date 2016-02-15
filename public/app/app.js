@@ -40,7 +40,8 @@ angular.module('myApp', ['ui.router'])
     })
     .state('contact', {
       url: '/contact',
-      templateUrl: "/views/contact.html"
+      templateUrl: "/views/contact.html",
+      controller: 'contactCtrl'
     })
     .state('directions', {
       url: '/directions',

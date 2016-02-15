@@ -9,7 +9,7 @@ body {
   margin: 0;
 }
 nav li {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 #video-background {
@@ -364,6 +364,9 @@ td {
     border: none;
     border-radius: 7px;
 }
+textarea {
+  height: 30%;
+}
 
 #submitButton {
     background-color:#275499;
@@ -379,8 +382,8 @@ td {
 }
 #floatingInfo {
     display: inline-block;
-    vertical-align: top;
-    height: 54%;
+    /*vertical-align: top;*/
+    height: 34%;
     width: 40%;
     position: relative;
 }
@@ -390,7 +393,7 @@ td {
     background-color: rgba(34, 34, 34, 0.8);
     padding: 5%;
     color: #999D99;
-    position: absolute;
+    /*position: absolute;*/
     left: 25%;
     display: inline-block;
     vertical-align: top;
@@ -410,8 +413,8 @@ td {
 
 
 .contact {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: #222222;
 }
 .contactContainer{
@@ -734,6 +737,7 @@ span.text-content {
   background: rgba(0,0,0,0.85);
   color: white;
   cursor: pointer;
+  font-size: 20px;
   display: table;
   height: 385px;
   left: 0;
@@ -943,7 +947,7 @@ input[type=radio] {
 .myProfile {
   padding: 11px;
   background-color: #222222;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   color: #999D99;
 }
