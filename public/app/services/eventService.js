@@ -23,8 +23,6 @@ angular.module('myApp').service('eventService', function($http) {
         bike: event.bike,
         img: event.img,
         group: event.group,
-        // rentedCar: rentedCar.car,
-        // rentedBike: rentedBike.bike,
 
       }
     }).then(function(res) {

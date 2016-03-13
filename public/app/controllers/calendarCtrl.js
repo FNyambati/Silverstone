@@ -1,7 +1,6 @@
 angular.module('myApp').controller('calendarCtrl', function($scope, eventService) {
 
   var events = [];
-  // $scope.events = [{title:"hmmm", start:'2016-02-15'}];
   $scope.getEvents = function() {
     eventService.getEvents()
       .then(function(res) {

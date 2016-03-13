@@ -9,11 +9,6 @@ angular.module('myApp', ['ui.router'])
       url: '/home',
       templateUrl: "/views/home.html"
     })
-    // .state('info', {
-    //   url: '/info',
-    //   templateUrl: "/views/info.html"
-    //   // controller: "infoCtrl"
-    // })
     .state('history', {
       url: '/history',
       templateUrl: "/views/history.html",
@@ -125,17 +120,17 @@ angular.module('myApp', ['ui.router'])
       url: '/events',
       templateUrl: '/views/events.html',
       controller: 'eventCtrl',
-      // resolve: {
-      //   user: function(userService, $state) {
-      //     return userService.getCurrentUser().then(function(response){
-      //       if(response.status !== 200){
-      //         $state.go('login');
-      //       }
-      //       return response.data;
-      //     });
-      //   }
-      //
-      // }
+      resolve: {
+        user: function(userService, $state) {
+          return userService.getCurrentUser().then(function(response){
+            if(response.status !== 200){
+              $state.go('login');
+            }
+            return response.data;
+          });
+        }
+
+      }
     })
     .state('calendar', {
       url: '/calendar',
@@ -155,16 +150,11 @@ angular.module('myApp', ['ui.router'])
 
 .directive('navbarDir', function() {
     return {
-      templateUrl: '/views/navBar.html'
+      templateUrl: './app/directives/navBar.html'
     };
   })
   .directive('footerDir', function() {
     return {
-      templateUrl: '/views/footer.html'
-    };
-  })
-  .directive('profileForm', function() {
-    return {
-      templateUrl: '/views/profileForm.html'
+      templateUrl: './app/directives/footer.html'
     };
   });

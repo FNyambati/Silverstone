@@ -9,7 +9,11 @@ body {
   margin: 0;
 }
 nav li {
-  font-size: 14px;
+  font-size: 12px;
+}
+.main{
+  width: 100vw;
+  background-color: #222222
 }
 #video-background {
   /*//////////  making the video fullscreen \\\\\\\\\\\\\\\ */
@@ -196,7 +200,8 @@ nav li {
 
 @media (max-width: 880px) {
   .footer-distributed {
-    font: bold 14px sans-serif;
+    font: bold 0.8em sans-serif;
+    display: none;
   }
   .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
     display: block;
@@ -228,24 +233,24 @@ nav li {
   height: 100%;
   background-color: #222222;
   color: #999D99;
-  font-size: 40px;
+  font-size: 3em;
 }
 .directions h2 {
   color: #999D99;
-  font-size: 35px;
+  font-size: 2em;
 }
 .steps ol {
   border: 4px solid #B41724;
 }
 .intro span {
   border: 4px solid #B41724;
-  font-size: 18px;
+  font-size: 1em;
 }
 .directions li {
   color: #999D99;
   text-align: left;
   padding: 9px;
-  font-size: 18px;
+  font-size: 1em;
 }
 .steps {
   float: left;
@@ -266,6 +271,7 @@ nav li {
 
 table {
   border-collapse: collapse;
+  width: 80%;
 }
 table, th, td {
   border: 1.5px solid black;
@@ -294,24 +300,24 @@ th {
 
 .hof {
   background-color: #222222;
-  width: 100%;
+  width: 80%;
 }
 .hof h1 {
   color: #999D99;
   margin: 0;
   text-align: center;
-  font-size: 50px;
+  font-size: 3em;
 }
 .hof p {
   color: #999D99;
   text-align: center;
-  font-size: 30px;
+  font-size: 1.2em;
 }
 td {
   color: #a6a6a6;
   font: sans-serif;
   text-align: center;
-  font-size: 18px;
+  font-size: 0.8em;
 }
 .results img {
   max-height: 14px;
@@ -336,7 +342,7 @@ td {
 /*//////////////////////CONTACT///////////////////////////////////////*/
 
 #ContactUs {
-  font-size: 5em;
+  font-size: 4em;
   margin-left: 10%;
   margin-bottom: 2%;
   color: #275499;
@@ -416,7 +422,7 @@ textarea {
 }
 .contact h1 {
   margin: 0 auto;
-  font-size: 4.5em;
+  font-size: 4em;
   color: #999D99;
   text-align: center;
 }
@@ -533,7 +539,7 @@ textarea {
 
 .history p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 1em;
 }
 .historyIntro p {
   max-width: 60%;
@@ -557,7 +563,8 @@ textarea {
   color: #999D99;
   text-align: center;
   margin: 0;
-  padding: 10px
+  padding: 10px;
+  font-size: 3em
 }
 .history p {
   color: #999D99;
@@ -606,7 +613,16 @@ marquee {
   width: 290px;
   overflow: hidden;
 }
+@media (max-width: 1000px) {
 
+  .history #accordion {
+    display: none;
+  }
+  .decade {
+    justify-content: center;
+    width: 60%;
+  }
+}
 /*///////////////////////////CIRCUT MAP//////////////////////////////*/
 
 .map {
@@ -819,6 +835,7 @@ ul.img-list li:hover span.text-content {
   margin: 0 auto;
   text-align: center;
   padding: 10px;
+  font-size: 3em
 }
 .outerRent {
   width: 100%;
@@ -830,10 +847,10 @@ ul.img-list li:hover span.text-content {
   width: 900px;
 }
 .image img {
-  min-width: 900px;
-  min-height: 500px;
-  max-width: 900px;
-  max-height: 500px;
+  /*min-width: 900px;
+  min-height: 500px;*/
+  max-width: 100%;
+  max-height: 60%;
   padding-bottom: 40px;
   margin: auto;
 }
@@ -853,6 +870,20 @@ ul.img-list li:hover span.text-content {
   padding: 8px;
   padding-left: 10px;
 }
+@media (max-width: 880px) {
+  .image img {
+    max-width: 40%;
+    max-height: 40%;
+  }
+  .image h2 span{
+    display: none;
+  }
+  .image h2{
+    display: none;
+  }
+
+}
+
 
 /*//////////////////////////LOGIN PAGE ///////////////////////*/
 

@@ -40,19 +40,4 @@ angular.module('myApp').controller('userCtrl', function($scope, userService, $st
       $state.go('profile');
     });
   };
-  // $scope.logout = function(user) {
-  //   userService.logout($scope.user).then(function(res){
-  //     swal({
-  //       title: " Succesfully Logged Out!",
-  //       text: "Thanks For Visiting",
-  //       confirmButtonText: 'Goodbye!',
-  //       confirmButtonColor: '0D2E60',
-  //       background: '#222222',
-  //       imageUrl: "images/myLogo.png",
-  //       imageSize: "120x120"
-  //     });
-  //     $state.go('home');
-  //
-  //   });
-  // };
 });

@@ -16,12 +16,6 @@ var eventSchema = Schema({
   host: {
     type: String
   },
-  // rentedCar: {   FIX THESE LATER!!!
-  //   type: String
-  // },
-  // rentedBike: {
-  //   type: String
-  // },
   title: {
     type: String
   },
